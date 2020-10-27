@@ -8,7 +8,5 @@ import ru.vsu.telecom.data.entity.MobileConnectContract;
  */
 public class Main {
     public static void main(String[] args) {
-        Contract c = new MobileConnectContract();
-        System.out.println(c.getId());
     }
 }

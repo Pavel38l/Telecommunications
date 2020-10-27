@@ -1,3 +1,4 @@
+target/*
 backend/HELP.md
 .gradle
 build/
