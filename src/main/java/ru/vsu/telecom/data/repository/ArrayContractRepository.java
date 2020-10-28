@@ -3,6 +3,7 @@ package ru.vsu.telecom.data.repository;
 import ru.vsu.telecom.data.entity.Contract;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,6 +47,9 @@ public class ArrayContractRepository implements ContractRepository {
 
     @Override
     public boolean addAll(List<Contract> contracts) {
+        if (contracts == null) {
+            return false;
+        }
         for (Contract contract : contracts) {
             if (!add(contract)) {
                 return false;
@@ -60,7 +64,7 @@ public class ArrayContractRepository implements ContractRepository {
             return Optional.empty();
         }
         for (int i = 0;i < count;i++) {
-            if (contractsArray[i].getId() == id) {
+            if (contractsArray[i].getId().equals(id)) {
                 return Optional.of(contractsArray[i]);
             }
         }
@@ -73,7 +77,7 @@ public class ArrayContractRepository implements ContractRepository {
             return false;
         }
         for (int i = 0;i < count;i++) {
-            if (contractsArray[i].getId() == id) {
+            if (contractsArray[i].getId().equals(id)) {
                 arrayShift(i);
                 count--;
                 return true;
@@ -91,11 +95,7 @@ public class ArrayContractRepository implements ContractRepository {
      * Array expansion - used when space is tight
      */
     private void arrayExpansion() {
-        Contract[] newContractsArray = new Contract[2*contractsArray.length];
-        for (int i = 0;i < contractsArray.length;i++) {
-            newContractsArray[i] = contractsArray[i];
-        }
-        contractsArray = newContractsArray;
+        contractsArray = Arrays.copyOf(contractsArray, 2*contractsArray.length);
     }
 
     /**
@@ -106,11 +106,10 @@ public class ArrayContractRepository implements ContractRepository {
         if (deleteIndex < 0 || deleteIndex >= count) {
             return;
         }
-        if (deleteIndex == count - 1) {
-            contractsArray[deleteIndex] = null;
-        }
+
         for (int i = deleteIndex;i < count - 1;i++) {
             contractsArray[i] = contractsArray[i + 1];
         }
+        contractsArray[count - 1] = null;
     }
 }
