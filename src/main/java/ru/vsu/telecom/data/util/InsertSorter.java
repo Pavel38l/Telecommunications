@@ -1,7 +1,6 @@
-package ru.vsu.telecom.data.utils;
+package ru.vsu.telecom.data.util;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Sorts an array using the insertion method according to the rules specified by the comparator

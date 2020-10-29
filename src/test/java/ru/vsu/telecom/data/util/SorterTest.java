@@ -1,4 +1,4 @@
-package ru.vsu.telecom.data.utils;
+package ru.vsu.telecom.data.util;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -7,8 +7,6 @@ import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Random;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Pavel_Burdyug

@@ -1,6 +1,4 @@
-package ru.vsu.telecom.data.utils;
-
-import java.util.List;
+package ru.vsu.telecom.data.util;
 
 
 /**

@@ -1,9 +1,5 @@
-package ru.vsu.telecom.data.utils;
+package ru.vsu.telecom.data.util;
 
-
-import java.io.Serializable;
-import java.util.Objects;
-import java.util.function.ToLongFunction;
 
 /**
  * A comparison function used to compare objects

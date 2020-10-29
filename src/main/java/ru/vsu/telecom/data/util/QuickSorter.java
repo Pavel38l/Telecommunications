@@ -1,4 +1,4 @@
-package ru.vsu.telecom.data.utils;
+package ru.vsu.telecom.data.util;
 
 import java.util.Arrays;
 

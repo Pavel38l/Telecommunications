@@ -1,17 +1,15 @@
-package ru.vsu.telecom.data.utils;
+package ru.vsu.telecom.data.util;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author Pavel_Burdyug
  */
-public class QuickSorterTest extends SorterTest {
+public class InsertSorterTest extends SorterTest {
     @Override
     public void setUp() {
         super.setUp();
-        sorter = new QuickSorter<>();
+        sorter = new InsertSorter<>();
     }
 
     @Override
