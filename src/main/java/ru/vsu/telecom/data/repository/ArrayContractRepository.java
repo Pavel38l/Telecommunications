@@ -1,26 +1,25 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.Contract;
+import ru.vsu.telecom.data.util.Comparator;
+import ru.vsu.telecom.data.util.Predicate;
+import ru.vsu.telecom.data.util.Sorter;
+import ru.vsu.telecom.factory.ObjectFactory;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
-
-/**
- * @author Pavel_Burdyug
- */
+import java.util.*;
 
 /**
  * Implementation using an array
+ * @author Pavel_Burdyug
  */
-public class ArrayContractRepository implements ContractRepository {
+public class ArrayContractRepository implements SortFilterContractRepository {
     private static final int INITIAL_SIZE = 50;
     private Contract[] contractsArray = new Contract[INITIAL_SIZE];
     /**
      * Number of contracts
      */
     private int count = 0;
+    private Sorter<Contract> sorter = ObjectFactory.getInstance().createObject(Sorter.class);
 
 
     @Override
@@ -89,6 +88,22 @@ public class ArrayContractRepository implements ContractRepository {
     @Override
     public int count() {
         return count;
+    }
+
+    @Override
+    public List<Contract> filter(Predicate<Contract> contractPredicate) {
+        List<Contract> filteredList = new ArrayList<>();
+        for (int i = 0;i < count;i++) {
+            if (contractPredicate.predict(contractsArray[i])) {
+                filteredList.add(contractsArray[i]);
+            }
+        }
+        return filteredList;
+    }
+
+    @Override
+    public List<Contract> sort(Comparator<Contract> contractComparator) {
+        return Arrays.asList(sorter.sort(contractComparator, getAll().toArray(new Contract[0])));
     }
 
     /**
