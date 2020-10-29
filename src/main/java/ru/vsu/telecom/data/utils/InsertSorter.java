@@ -15,11 +15,12 @@ public class InsertSorter<T> implements Sorter<T> {
         array = Arrays.copyOf(array, array.length);
         for (int i = 1;i < array.length;i++) {
             int j = i;
-            while (j > 0 && comparator.compare(array[j], array[j - 1]) < 0) {
+            T x = array[i];
+            while (j > 0 && comparator.compare(array[j - 1], x) > 0) {
                 array[j] = array[j - 1];
                 j--;
             }
-            array[j] = array[i];
+            array[j] = x;
         }
         return array;
     }
