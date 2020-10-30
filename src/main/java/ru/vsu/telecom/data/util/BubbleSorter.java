@@ -9,7 +9,7 @@ import java.util.Arrays;
  */
 public class BubbleSorter<T> implements Sorter<T> {
     @Override
-    public T[] sort(Comparator<T> comparator, T[] array) {
+    public T[] sort(MyComparator<T> comparator, T[] array) {
         array = Arrays.copyOf(array, array.length);
         for (int i = 0;i < array.length - 1;i++) {
             for (int j = array.length - 1;j > i;j--) {

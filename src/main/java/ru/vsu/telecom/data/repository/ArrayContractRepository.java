@@ -1,8 +1,8 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.Contract;
-import ru.vsu.telecom.data.util.Comparator;
-import ru.vsu.telecom.data.util.Predicate;
+import ru.vsu.telecom.data.util.MyComparator;
+import ru.vsu.telecom.data.util.MyPredicate;
 import ru.vsu.telecom.data.util.Sorter;
 import ru.vsu.telecom.factory.ObjectFactory;
 
@@ -91,7 +91,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     }
 
     @Override
-    public List<Contract> filter(Predicate<Contract> contractPredicate) {
+    public List<Contract> filter(MyPredicate<Contract> contractPredicate) {
         List<Contract> filteredList = new ArrayList<>();
         for (int i = 0;i < count;i++) {
             if (contractPredicate.predict(contractsArray[i])) {
@@ -102,7 +102,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     }
 
     @Override
-    public List<Contract> sort(Comparator<Contract> contractComparator) {
+    public List<Contract> sort(MyComparator<Contract> contractComparator) {
         return Arrays.asList(sorter.sort(contractComparator, getAll().toArray(new Contract[0])));
     }
 

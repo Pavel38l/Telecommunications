@@ -15,5 +15,5 @@ public interface Sorter<T> {
      * @param array an array to sort
      * @return sorted array
      */
-    T[] sort(Comparator<T> comparator, T[] array);
+    T[] sort(MyComparator<T> comparator, T[] array);
 }

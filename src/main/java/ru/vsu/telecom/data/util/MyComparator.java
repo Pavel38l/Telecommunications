@@ -7,7 +7,7 @@ package ru.vsu.telecom.data.util;
  * @param <T> the type of objects to compare
  */
 @FunctionalInterface
-public interface Comparator<T> {
+public interface MyComparator<T> {
     /**
      * Compares its two arguments for order.  Returns a negative integer,
      * zero, or a positive integer as the first argument is less than, equal
@@ -27,7 +27,7 @@ public interface Comparator<T> {
      * @return the composition of comparators
      * @throws NullPointerException - if other is null
      */
-    default Comparator<T> thenComparing(Comparator<? super T> other) {
+    default MyComparator<T> thenComparing(MyComparator<T> other) {
         if (other == null) {
             throw new NullPointerException();
         }

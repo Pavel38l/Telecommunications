@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class InsertSorter<T> implements Sorter<T> {
 
     @Override
-    public T[] sort(Comparator<T> comparator, T[] array) {
+    public T[] sort(MyComparator<T> comparator, T[] array) {
         array = Arrays.copyOf(array, array.length);
         for (int i = 1;i < array.length;i++) {
             int j = i;

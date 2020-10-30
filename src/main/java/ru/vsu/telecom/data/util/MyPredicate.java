@@ -7,7 +7,7 @@ package ru.vsu.telecom.data.util;
  * @param <T> - the type of argument
  */
 @FunctionalInterface
-public interface Predicate<T> {
+public interface MyPredicate<T> {
 
     /**
      * Calculate the predicate
@@ -22,11 +22,11 @@ public interface Predicate<T> {
      * @return the composition of predicates using a boolean operator and
      * @throws NullPointerException if other is null
      */
-    default Predicate<T> or(Predicate<? super T> other) {
+    default MyPredicate<T> or(MyPredicate<T> other) {
         if (other == null) {
             throw new NullPointerException();
         }
-        return (t) -> predict(t) || other.predict(t);
+        return (t) -> predict(t) || other.predict((t));
     }
 
     /**
@@ -35,7 +35,7 @@ public interface Predicate<T> {
      * @return the composition of predicates using a boolean operator or
      * @throws NullPointerException if other is null
      */
-    default Predicate<T> and(Predicate<? super T> other) {
+    default MyPredicate<T> and(MyPredicate<T> other) {
         if (other == null) {
             throw new NullPointerException();
         }
@@ -47,7 +47,7 @@ public interface Predicate<T> {
      * predicate.
      * @return the predicate that represents the logical negation of this predicate
      */
-    default Predicate<T> not() {
+    default MyPredicate<T> not() {
         return (t) ->!predict(t);
     }
 

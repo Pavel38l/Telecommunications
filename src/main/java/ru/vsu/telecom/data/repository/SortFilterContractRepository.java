@@ -1,8 +1,8 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.Contract;
-import ru.vsu.telecom.data.util.Comparator;
-import ru.vsu.telecom.data.util.Predicate;
+import ru.vsu.telecom.data.util.MyComparator;
+import ru.vsu.telecom.data.util.MyPredicate;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public interface SortFilterContractRepository extends ContractRepository {
      * @param contractPredicate predicate to apply to each contract to determine if it should be included
      * @return the list consisting of the contracts that match the given predicate
      */
-    List<Contract> filter(Predicate<Contract> contractPredicate);
+    List<Contract> filter(MyPredicate<Contract> contractPredicate);
 
     /**
      * Return a list of contracts
@@ -26,5 +26,5 @@ public interface SortFilterContractRepository extends ContractRepository {
      * @return a list of contracts
      * sorted according to the comparison rules set by the comparator
      */
-    List<Contract> sort(Comparator<Contract> contractComparator);
+    List<Contract> sort(MyComparator<Contract> contractComparator);
 }

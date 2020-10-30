@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class QuickSorter<T> implements Sorter<T> {
 
     @Override
-    public T[] sort(Comparator<T> comparator, T[] array) {
+    public T[] sort(MyComparator<T> comparator, T[] array) {
         array = Arrays.copyOf(array, array.length);
         QuickSort(array, 0, array.length - 1, comparator);
         return array;
@@ -23,7 +23,7 @@ public class QuickSorter<T> implements Sorter<T> {
      * @param r - the right border of the sorted area
      * @param comparator - the Comparator used to compare array elements
      */
-    private void QuickSort(T[] array, int l, int r, Comparator<T> comparator) {
+    private void QuickSort(T[] array, int l, int r, MyComparator<T> comparator) {
         if (l < r) {
             int q = Partition(array, l, r, comparator);
             QuickSort(array, l, q - 1, comparator);
@@ -39,7 +39,7 @@ public class QuickSorter<T> implements Sorter<T> {
      * @param comparator the Comparator used to compare array elements
      * @return index of 'pivot' element
      */
-    private int Partition(T[] array, int l, int r, Comparator<T> comparator) {
+    private int Partition(T[] array, int l, int r, MyComparator<T> comparator) {
         var x = array[r];
         int less = l;
         for (int i = l; i < r; ++i) {
