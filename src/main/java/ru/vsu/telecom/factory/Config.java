@@ -1,5 +1,6 @@
 package ru.vsu.telecom.factory;
 
+import ru.vsu.telecom.data.util.InsertSorter;
 import ru.vsu.telecom.data.util.QuickSorter;
 import ru.vsu.telecom.data.util.Sorter;
 

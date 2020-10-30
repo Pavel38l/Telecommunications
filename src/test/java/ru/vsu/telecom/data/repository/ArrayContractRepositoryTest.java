@@ -2,39 +2,48 @@ package ru.vsu.telecom.data.repository;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import ru.vsu.telecom.data.entity.*;
+import ru.vsu.telecom.data.util.MyComparator;
+import ru.vsu.telecom.data.util.MyPredicate;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.time.LocalDate;
+import java.util.*;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 /**
  * @author Pavel_Burdyug
  */
 public class ArrayContractRepositoryTest {
 
-    private ContractRepository contractRepository;
+    private SortFilterContractRepository contractRepository;
     private static final int CONTRACT_COUNT = 150;
     private Random rnd = new Random();
     private List<Contract> contracts = new ArrayList<>();
+    private static List<String> fullNames = new ArrayList<>();
+
+    @BeforeClass
+    public static void init() {
+        String path = ClassLoader.getSystemClassLoader().getResource("fullname.txt").getPath();
+        try (Scanner sc = new Scanner(new File(path), "UTF-8")) {
+            while(sc.hasNext()) {
+                fullNames.add(sc.nextLine().trim());
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
     @Before
     public void setUp() {
         contractRepository = new ArrayContractRepository();
         for (int i = 0; i < CONTRACT_COUNT; i++) {
-            Contract contract;
-            switch (i % 3) {
-                case 0:
-                    contract = new DigitalTelevisionContract();
-                    break;
-                case 1:
-                    contract = new MobileConnectContract();
-                    break;
-                default:
-                    contract = new WiredInternetContract();
-                    break;
-            }
-            contract.setId((long) i);
+            Contract contract = createRandomContract(i);
             contractRepository.add(contract);
             contracts.add(contract);
         }
@@ -99,5 +108,107 @@ public class ArrayContractRepositoryTest {
     @Test
     public void count() {
         Assert.assertEquals(CONTRACT_COUNT, contractRepository.count());
+    }
+
+    @Test
+    public void filter() {
+        // mobile contracts with SMS more than 50
+        MyPredicate<Contract> myMobileContract = contract -> contract.getClass().equals(MobileConnectContract.class);
+        MyPredicate<Contract> mySms = contract -> {
+            MobileConnectContract mcc = (MobileConnectContract) contract;
+            return mcc.getNumberOfSms() > 50;
+        };
+        List<Contract> res = contractRepository.filter(myMobileContract.and(mySms));
+
+        Predicate<Contract> mobileContract = contract -> contract.getClass().equals(MobileConnectContract.class);
+        Predicate<Contract> sms = contract -> {
+            MobileConnectContract mcc = (MobileConnectContract) contract;
+            return mcc.getNumberOfSms() > 50;
+        };
+        List<Contract> expected = contracts.stream().filter(mobileContract.and(sms)).collect(Collectors.toList());
+        Assert.assertEquals(expected, res);
+    }
+
+    @Test
+    public void sort() {
+        MyComparator<Contract> myAge = (c1, c2) -> Integer.compare(
+                c1.getCustomer().calcAge(),
+                c2.getCustomer().calcAge()
+        );
+        MyComparator<Contract> myId = (c1, c2) -> Long.compare(c1.getId(), c2.getId());
+        List<Contract> res = contractRepository.sort(
+                myAge.thenComparing(myId)
+        );
+        Comparator<Contract> age = Comparator.comparingInt(c -> c.getCustomer().calcAge());
+        var expected = contracts.stream().sorted(age.thenComparingLong(Contract::getId)).collect(Collectors.toList());
+        Assert.assertEquals(expected, res);
+    }
+
+    private LocalDate createRandomLocalDate() {
+        long minDay = LocalDate.of(1970, 1, 1).toEpochDay();
+        long maxDay = LocalDate.of(2015, 12, 31).toEpochDay();
+        long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
+        return LocalDate.ofEpochDay(randomDay);
+    }
+
+    private Customer createRandomCustomer() {
+        long id = rnd.nextInt(100);
+        String fullName = fullNames.get(rnd.nextInt(fullNames.size()));
+        LocalDate dateOfBirth = createRandomLocalDate();
+        Sex sex = Sex.values()[rnd.nextInt(Sex.values().length)];
+        int passportSeriesNumber = 100000 + rnd.nextInt(100000);
+        return new Customer(
+                id,
+                fullName,
+                dateOfBirth,
+                sex,
+                passportSeriesNumber
+        );
+    }
+    private Contract createRandomContract(int i) {
+        Contract contract;
+        Long contractNumber = 100000L + rnd.nextInt(100000);
+        LocalDate startDate = createRandomLocalDate(), endDate = createRandomLocalDate();
+        Customer customer = createRandomCustomer();
+        ChannelPackage channelPackage = null;
+        int numberOfMinutes = rnd.nextInt(300);
+        int numberOfSms = rnd.nextInt(300);
+        double trafficSize = rnd.nextInt(10);
+        double connectionSpeed = rnd.nextInt(400);
+        switch (i % 3) {
+            case 0:
+                contract = new DigitalTelevisionContract(
+                        (long) i,
+                        startDate,
+                        endDate,
+                        contractNumber,
+                        customer,
+                        channelPackage
+                );
+                break;
+            case 1:
+                contract = new MobileConnectContract(
+                        (long) i,
+                        startDate,
+                        endDate,
+                        contractNumber,
+                        customer,
+                        numberOfMinutes,
+                        numberOfSms,
+                        trafficSize
+                );
+                break;
+            default:
+                contract = new WiredInternetContract(
+                        (long) i,
+                        startDate,
+                        endDate,
+                        contractNumber,
+                        customer,
+                        connectionSpeed
+                );
+                break;
+        }
+        return contract;
     }
 }
