@@ -1,12 +1,11 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.Contract;
-import ru.vsu.telecom.data.util.MyComparator;
-import ru.vsu.telecom.data.util.MyPredicate;
 import ru.vsu.telecom.data.util.Sorter;
 import ru.vsu.telecom.factory.ObjectFactory;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 /**
  * Implementation using an array
@@ -19,7 +18,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
      * Number of contracts
      */
     private int count = 0;
-    private Sorter<Contract> sorter = ObjectFactory.getInstance().createObject(Sorter.class);
+    private final Sorter<Contract> sorter = ObjectFactory.getInstance().createObject(Sorter.class);
 
 
     @Override
@@ -91,19 +90,25 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     }
 
     @Override
-    public List<Contract> filter(MyPredicate<Contract> contractPredicate) {
-        List<Contract> filteredList = new ArrayList<>();
+    public SortFilterContractRepository filter(Predicate<Contract> contractPredicate) {
+        SortFilterContractRepository repository = new ArrayContractRepository();
         for (int i = 0;i < count;i++) {
-            if (contractPredicate.predict(contractsArray[i])) {
-                filteredList.add(contractsArray[i]);
+            if (contractPredicate.test(contractsArray[i])) {
+                repository.add(contractsArray[i]);
             }
         }
-        return filteredList;
+        return repository;
     }
 
     @Override
-    public List<Contract> sort(MyComparator<Contract> contractComparator) {
-        return Arrays.asList(sorter.sort(contractComparator, getAll().toArray(new Contract[0])));
+    public SortFilterContractRepository sort(Comparator<Contract> contractComparator) {
+        SortFilterContractRepository repository = new ArrayContractRepository();
+        repository.addAll(
+                Arrays.asList(
+                        sorter.sort(contractComparator, getAll().toArray(new Contract[0]))
+                )
+        );
+        return repository;
     }
 
     /**

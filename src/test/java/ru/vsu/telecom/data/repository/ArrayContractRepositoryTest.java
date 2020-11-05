@@ -113,33 +113,30 @@ public class ArrayContractRepositoryTest {
     @Test
     public void filter() {
         // mobile contracts with SMS more than 50
-        MyPredicate<Contract> myMobileContract = contract -> contract.getClass().equals(MobileConnectContract.class);
-        MyPredicate<Contract> mySms = contract -> {
+        Predicate<Contract> mobileContractPredicate = contract -> contract.getClass().equals(MobileConnectContract.class);
+        Predicate<Contract> smsPredicate = contract -> {
             MobileConnectContract mcc = (MobileConnectContract) contract;
             return mcc.getNumberOfSms() > 50;
         };
-        List<Contract> res = contractRepository.filter(myMobileContract.and(mySms));
+        List<Contract> res = contractRepository.filter(mobileContractPredicate.
+                and(smsPredicate)).getAll();
 
-        Predicate<Contract> mobileContract = contract -> contract.getClass().equals(MobileConnectContract.class);
-        Predicate<Contract> sms = contract -> {
-            MobileConnectContract mcc = (MobileConnectContract) contract;
-            return mcc.getNumberOfSms() > 50;
-        };
-        List<Contract> expected = contracts.stream().filter(mobileContract.and(sms)).collect(Collectors.toList());
+
+        List<Contract> expected = contracts.
+                stream().
+                filter(mobileContractPredicate.
+                and(smsPredicate)).
+                collect(Collectors.toList());
         Assert.assertEquals(expected, res);
     }
 
     @Test
     public void sort() {
-        MyComparator<Contract> myAge = (c1, c2) -> Integer.compare(
-                c1.getCustomer().calcAge(),
-                c2.getCustomer().calcAge()
-        );
-        MyComparator<Contract> myId = (c1, c2) -> Long.compare(c1.getId(), c2.getId());
-        List<Contract> res = contractRepository.sort(
-                myAge.thenComparing(myId)
-        );
         Comparator<Contract> age = Comparator.comparingInt(c -> c.getCustomer().calcAge());
+        List<Contract> res = contractRepository.sort(
+                age.thenComparingLong(Contract::getId)
+        ).getAll();
+
         var expected = contracts.stream().sorted(age.thenComparingLong(Contract::getId)).collect(Collectors.toList());
         Assert.assertEquals(expected, res);
     }

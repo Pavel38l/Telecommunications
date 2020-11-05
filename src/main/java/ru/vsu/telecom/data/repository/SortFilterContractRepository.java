@@ -4,7 +4,9 @@ import ru.vsu.telecom.data.entity.Contract;
 import ru.vsu.telecom.data.util.MyComparator;
 import ru.vsu.telecom.data.util.MyPredicate;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.function.Predicate;
 
 /**
  * Extension of {@link ContractRepository} to provide additional methods to filter and sort contracts
@@ -13,18 +15,18 @@ import java.util.List;
  */
 public interface SortFilterContractRepository extends ContractRepository {
     /**
-     * Returns a list consisting of the contracts that match the given predicate
+     * Returns the SortFilterContractRepository consisting of the contracts that match the given predicate
      * @param contractPredicate predicate to apply to each contract to determine if it should be included
-     * @return the list consisting of the contracts that match the given predicate
+     * @return the SortFilterContractRepository consisting of the contracts that match the given predicate
      */
-    List<Contract> filter(MyPredicate<Contract> contractPredicate);
+    ContractRepository filter(Predicate<Contract> contractPredicate);
 
     /**
-     * Return a list of contracts
+     * Return a SortFilterContractRepository of contracts
      * sorted according to the comparison rules set by the comparator
      * @param contractComparator used to compare Contracts
-     * @return a list of contracts
+     * @return a SortFilterContractRepository of contracts
      * sorted according to the comparison rules set by the comparator
      */
-    List<Contract> sort(MyComparator<Contract> contractComparator);
+    ContractRepository sort(Comparator<Contract> contractComparator);
 }

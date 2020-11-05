@@ -1,6 +1,8 @@
 package ru.vsu.telecom.data.util;
 
 
+import java.util.Comparator;
+
 /**
  * Returns a sorted array according to the rules specified by the comparator,
  * does not change the passed array
@@ -15,5 +17,5 @@ public interface Sorter<T> {
      * @param array an array to sort
      * @return sorted array
      */
-    T[] sort(MyComparator<T> comparator, T[] array);
+    T[] sort(Comparator<T> comparator, T[] array);
 }
