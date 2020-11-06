@@ -1,19 +1,7 @@
 package ru.vsu.telecom;
 
-import ru.vsu.telecom.data.entity.*;
-import ru.vsu.telecom.data.repository.ArrayContractRepository;
-import ru.vsu.telecom.data.repository.ContractRepository;
-import ru.vsu.telecom.data.util.Sorter;
-import ru.vsu.telecom.factory.ObjectFactory;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
-import java.lang.reflect.Array;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Arrays;
+import lombok.SneakyThrows;
+import ru.vsu.telecom.data.util.FileUtils;
 import java.util.List;
 import java.util.Scanner;
 
@@ -21,7 +9,15 @@ import java.util.Scanner;
  * @author Pavel_Burdyug
  */
 public class Main {
+    @SneakyThrows
     public static void main(String[] args) {
-
+        List<String[]> l = FileUtils.readCsv(ClassLoader.getSystemResource("pop.csv").getPath());
+        for (String[] s : l) {
+            for (String str : s) {
+                System.out.print(str);
+            }
+            System.out.println();
+        }
+        FileUtils.write2Csv("pop.csv", l);
     }
 }
