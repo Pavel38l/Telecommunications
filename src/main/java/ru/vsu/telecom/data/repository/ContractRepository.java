@@ -74,4 +74,11 @@ public interface ContractRepository {
      */
     void buildFromCsv(String csvFilePath) throws IOException;
 
+    /**
+     * Writes repository contracts to the file
+     * @param csvFilePath the path to the csv file
+     * @throws IOException if an I/O error occurs opening the file
+     */
+    void writeToCsv(String csvFilePath) throws IOException;
+
 }
