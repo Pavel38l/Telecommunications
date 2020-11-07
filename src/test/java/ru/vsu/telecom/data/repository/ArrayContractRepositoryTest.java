@@ -111,6 +111,13 @@ public class ArrayContractRepositoryTest {
     }
 
     @Test
+    public void clear() {
+        contractRepository.clear();
+        contracts.clear();
+        Assert.assertEquals(contracts, contractRepository.getAll());
+    }
+
+    @Test
     public void filter() {
         // mobile contracts with SMS more than 50
         Predicate<Contract> mobileContractPredicate = contract -> contract.getClass().equals(MobileConnectContract.class);
@@ -128,6 +135,16 @@ public class ArrayContractRepositoryTest {
                 and(smsPredicate)).
                 collect(Collectors.toList());
         Assert.assertEquals(expected, res);
+    }
+
+    @Test
+    public void findOne() {
+        for (Contract contract : contracts) {
+            Optional<Contract> actual = contractRepository.findOne(e -> e.getId().equals(contract.getId()));
+            Assert.assertTrue(actual.isPresent());
+            Assert.assertEquals(contract.getId(), actual.get().getId());
+        }
+
     }
 
     @Test

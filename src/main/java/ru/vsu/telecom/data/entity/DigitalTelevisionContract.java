@@ -1,9 +1,6 @@
 package ru.vsu.telecom.data.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -18,6 +15,7 @@ import java.time.LocalDate;
 public class DigitalTelevisionContract extends Contract {
     private ChannelPackage channelPackage;
 
+    @Builder
     public DigitalTelevisionContract(Long id, LocalDate startDate, LocalDate endDate, Long contractNumber,
                                      Customer customer, ChannelPackage channelPackage) {
         super(id, startDate, endDate, contractNumber, customer);

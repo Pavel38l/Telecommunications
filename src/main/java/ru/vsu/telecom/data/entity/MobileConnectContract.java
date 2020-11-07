@@ -1,9 +1,6 @@
 package ru.vsu.telecom.data.entity;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -23,6 +20,7 @@ public class MobileConnectContract extends Contract {
      */
     private double trafficSize;
 
+    @Builder
     public MobileConnectContract(Long id, LocalDate startDate, LocalDate endDate, Long contractNumber,
                                  Customer customer, int numberOfMinutes, int numberOfSms, double trafficSize) {
         super(id, startDate, endDate, contractNumber, customer);

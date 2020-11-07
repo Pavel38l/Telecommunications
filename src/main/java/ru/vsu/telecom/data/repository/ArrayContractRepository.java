@@ -1,9 +1,13 @@
 package ru.vsu.telecom.data.repository;
 
-import ru.vsu.telecom.data.entity.Contract;
+import ru.vsu.telecom.data.entity.*;
+import ru.vsu.telecom.data.util.FileUtils;
 import ru.vsu.telecom.data.util.Sorter;
 import ru.vsu.telecom.factory.ObjectFactory;
 
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -90,6 +94,15 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     }
 
     @Override
+    public void buildFromCsv(String csvFilePath) throws IOException {
+        List<String[]> stringData =  FileUtils.readCsv(csvFilePath);
+        for (String[] line : stringData) {
+
+        }
+
+    }
+
+    @Override
     public SortFilterContractRepository filter(Predicate<Contract> contractPredicate) {
         SortFilterContractRepository repository = new ArrayContractRepository();
         for (int i = 0;i < count;i++) {
@@ -109,6 +122,22 @@ public class ArrayContractRepository implements SortFilterContractRepository {
                 )
         );
         return repository;
+    }
+
+    @Override
+    public Optional<Contract> findOne(Predicate<Contract> contractPredicate) {
+        for (int i = 0;i < count;i++) {
+            if (contractPredicate.test(contractsArray[i])) {
+                return Optional.of(contractsArray[i]);
+            }
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public void clear() {
+        contractsArray = new Contract[INITIAL_SIZE];
+        count = 0;
     }
 
     /**
@@ -131,5 +160,69 @@ public class ArrayContractRepository implements SortFilterContractRepository {
             contractsArray[i] = contractsArray[i + 1];
         }
         contractsArray[count - 1] = null;
+    }
+
+    /**
+     * Returns a contract created from a csv line
+     * @return a contract created from a csv line
+     */
+    private Contract contractFromString(String[] line) {
+        Contract contract;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+        Long contractId = Long.parseLong(line[0]);
+        LocalDate startDate = LocalDate.parse(line[1], formatter);
+        LocalDate endDate = LocalDate.parse(line[2], formatter);
+        Long contractNumber = Long.parseLong(line[3]);
+        Customer customer = Customer.builder()
+                .id(Long.parseLong(line[4]))
+                .fullName(line[5].trim())
+                .dateOfBirth(LocalDate.parse(line[6], formatter))
+                .sex(Sex.valueOf(line[7].trim().toUpperCase()))
+                .passportSeriesNumber(Integer.parseInt(line[8]))
+                .build();
+        String type = line[9];
+        String[] fields = line[10].split(",");
+        switch (type.trim().toUpperCase()) {
+            case "MOBILE":
+                contract = MobileConnectContract.builder()
+                        .id(contractId)
+                        .startDate(startDate)
+                        .endDate(endDate)
+                        .contractNumber(contractNumber)
+                        .customer(customer)
+                        .numberOfMinutes(Integer.parseInt(fields[0]))
+                        .numberOfSms(Integer.parseInt(fields[1]))
+                        .trafficSize(Double.parseDouble(fields[2]))
+                        .build();
+                break;
+            case "INTERNET":
+                contract = WiredInternetContract.builder()
+                        .id(contractId)
+                        .startDate(startDate)
+                        .endDate(endDate)
+                        .contractNumber(contractNumber)
+                        .customer(customer)
+                        .connectionSpeed(Double.parseDouble(fields[0]))
+                        .build();
+                break;
+            case "TELEVISION":
+                ChannelPackage channelPackage = ChannelPackage.builder()
+                        .id(Long.parseLong(fields[0]))
+                        .name(fields[1])
+                        .description(fields[2])
+                        .build();
+                contract = DigitalTelevisionContract.builder()
+                        .id(contractId)
+                        .startDate(startDate)
+                        .endDate(endDate)
+                        .contractNumber(contractNumber)
+                        .customer(customer)
+                        .channelPackage(channelPackage)
+                        .build();
+                break;
+            default:
+                throw new NumberFormatException("There is no such type");
+        }
+        return contract;
     }
 }

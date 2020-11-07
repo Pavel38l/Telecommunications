@@ -2,14 +2,13 @@ package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.Contract;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.Predicate;
 
 /**
  * @author Pavel_Burdyug
- */
-
-/**
  * Repository for interacting with contracts
  */
 public interface ContractRepository {
@@ -53,4 +52,26 @@ public interface ContractRepository {
      * @return the number of contracts in repository
      */
     int count();
+
+    /**
+     * Return an Optional describing the contract that match the given predicate,
+     * or an empty Optional if there is no contract with
+     * @param contractPredicate the predicate describing whether a contract satisfies the conditions
+     * @return an Optional describing the contract that match the given predicate,
+     * or an empty Optional if there is no contract with
+     */
+    Optional<Contract> findOne(Predicate<Contract> contractPredicate);
+
+    /**
+     * Removes all contracts from repository
+     */
+    void clear();
+
+    /**
+     * Fills the repository with the contracts specified in the file
+     * @param csvFilePath the path to the csv file
+     * @throws IOException if an I/O error occurs opening the file
+     */
+    void buildFromCsv(String csvFilePath) throws IOException;
+
 }

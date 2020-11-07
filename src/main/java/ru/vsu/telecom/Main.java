@@ -1,7 +1,12 @@
 package ru.vsu.telecom;
 
 import lombok.SneakyThrows;
+import ru.vsu.telecom.data.repository.ContractRepository;
+import ru.vsu.telecom.data.repository.SortFilterContractRepository;
 import ru.vsu.telecom.data.util.FileUtils;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,13 +16,6 @@ import java.util.Scanner;
 public class Main {
     @SneakyThrows
     public static void main(String[] args) {
-        List<String[]> l = FileUtils.readCsv(ClassLoader.getSystemResource("pop.csv").getPath());
-        for (String[] s : l) {
-            for (String str : s) {
-                System.out.print(str);
-            }
-            System.out.println();
-        }
-        FileUtils.write2Csv("pop.csv", l);
+
     }
 }

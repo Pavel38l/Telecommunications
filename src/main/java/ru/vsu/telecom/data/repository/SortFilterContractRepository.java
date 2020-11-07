@@ -6,6 +6,7 @@ import ru.vsu.telecom.data.util.MyPredicate;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Predicate;
 
 /**
@@ -29,4 +30,5 @@ public interface SortFilterContractRepository extends ContractRepository {
      * sorted according to the comparison rules set by the comparator
      */
     ContractRepository sort(Comparator<Contract> contractComparator);
+
 }
