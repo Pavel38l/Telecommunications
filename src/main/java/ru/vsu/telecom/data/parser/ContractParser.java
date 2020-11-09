@@ -26,9 +26,10 @@ public class ContractParser {
      * Returns a contract created from a csv line
      * @param line array of string - line in csv file
      * @return a contract created from a csv line
+     * @throws RuntimeException if the data is incorrect and an error occurs when parsing
      */
 
-    public Contract contractFromCsvLine(String[] line) {
+    public Contract contractFromCsvLine(String[] line) throws RuntimeException {
         Contract contract;
         for (int i = 0;i < line.length;i++) {
             line[i] = line[i].trim();

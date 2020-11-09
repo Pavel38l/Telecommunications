@@ -1,5 +1,6 @@
 package ru.vsu.telecom.data.repository;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -10,6 +11,7 @@ import ru.vsu.telecom.data.util.MyPredicate;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -158,11 +160,31 @@ public class ArrayContractRepositoryTest {
         Assert.assertEquals(expected, res);
     }
 
+    @Test
+    public void buildFromCsv() {
+        try {
+            contractRepository.writeToCsv("files/data.csv");
+            contractRepository.buildFromCsv("files/data.csv");
+            Assert.assertEquals(contracts, contractRepository.getAll());
+        } catch (IOException e) {
+            System.out.println("File not found!");
+        }
+
+    }
+
     private LocalDate createRandomLocalDate() {
         long minDay = LocalDate.of(1970, 1, 1).toEpochDay();
         long maxDay = LocalDate.of(2015, 12, 31).toEpochDay();
         long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
         return LocalDate.ofEpochDay(randomDay);
+    }
+
+    private ChannelPackage createRandomChannelPackage() {
+        return ChannelPackage.builder()
+                .id((long)rnd.nextInt(10))
+                .name(RandomStringUtils.random(10, true, false))
+                .description(RandomStringUtils.random(20, true, false))
+                .build();
     }
 
     private Customer createRandomCustomer() {
@@ -184,7 +206,7 @@ public class ArrayContractRepositoryTest {
         Long contractNumber = 100000L + rnd.nextInt(100000);
         LocalDate startDate = createRandomLocalDate(), endDate = createRandomLocalDate();
         Customer customer = createRandomCustomer();
-        ChannelPackage channelPackage = null;
+        ChannelPackage channelPackage = createRandomChannelPackage();
         int numberOfMinutes = rnd.nextInt(300);
         int numberOfSms = rnd.nextInt(300);
         double trafficSize = rnd.nextInt(10);

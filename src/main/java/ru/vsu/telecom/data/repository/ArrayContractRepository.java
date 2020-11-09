@@ -97,7 +97,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     }
 
     @Override
-    public void buildFromCsv(String csvFilePath) throws IOException {
+    public void buildFromCsv(String csvFilePath) throws IOException, RuntimeException {
         List<String[]> stringData =  FileUtils.readCsv(csvFilePath);
         clear();
         List<Customer> customers = new ArrayList<>();
