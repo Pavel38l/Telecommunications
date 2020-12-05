@@ -23,10 +23,6 @@ public class ArrayContractRepository implements SortFilterContractRepository {
      */
     private int count = 0;
     private final Sorter<Contract> sorter = ObjectFactory.getInstance().createObject(Sorter.class);
-    private final ContractParser parser = ContractParser.builder()
-            .dataFormatter(DateTimeFormatter.ofPattern("dd.MM.yyyy"))
-            .separator(",")
-            .build();
 
     @Override
     public List<Contract> getAll() {
@@ -94,43 +90,6 @@ public class ArrayContractRepository implements SortFilterContractRepository {
     @Override
     public int count() {
         return count;
-    }
-
-    @Override
-    public void buildFromCsv(String csvFilePath) throws IOException, RuntimeException {
-        List<String[]> stringData =  FileUtils.readCsv(csvFilePath);
-        clear();
-        List<Customer> customers = new ArrayList<>();
-        List<ChannelPackage> channelPackages = new ArrayList<>();
-        for (String[] line : stringData) {
-            Contract contract = parser.contractFromCsvLine(line);
-            int exIndex = customers.indexOf(contract.getCustomer());
-            if (exIndex != -1) {
-                contract.setCustomer(customers.get(exIndex));
-            }
-            if (contract.getClass() == DigitalTelevisionContract.class) {
-                DigitalTelevisionContract dTC = (DigitalTelevisionContract) contract;
-                exIndex = channelPackages.indexOf(dTC.getChannelPackage());
-                if (exIndex != -1) {
-                    dTC.setChannelPackage(channelPackages.get(exIndex));
-                }
-            }
-            add(contract);
-        }
-    }
-
-    @Override
-    public void writeToCsv(String csvFilePath) throws IOException {
-        List<String[]> data = new ArrayList<>();
-        data.add(
-                new String[]{"CONTRACTID","START", "END",
-                "CONTRACTNUMBER", "CUSTOMERID", "FULLNAME",
-                 "DATEOFBITRH", "SEX" , "PASSPORTSERIESNUMBER","TYPE", "ADDINFO"}
-                 );
-        for (int i = 0;i < count;i++) {
-            data.add(parser.contractToCsvLine(contractsArray[i]));
-        }
-        FileUtils.write2Csv(csvFilePath, data);
     }
 
     @Override

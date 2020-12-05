@@ -66,20 +66,4 @@ public interface ContractRepository {
      * Removes all contracts from repository
      */
     void clear();
-
-    /**
-     * Fills the repository with the contracts specified in the file
-     * @param csvFilePath the path to the csv file
-     * @throws IOException if an I/O error occurs opening the file
-     */
-    void buildFromCsv(String csvFilePath) throws IOException;
-
-    /**
-     * Writes repository contracts to the file
-     * @param csvFilePath the path to the csv file
-     * @throws IOException if an I/O error occurs opening the file
-     * @throws RuntimeException if the data is incorrect and an error occurs when parsing
-     */
-    void writeToCsv(String csvFilePath) throws IOException, RuntimeException;
-
 }
