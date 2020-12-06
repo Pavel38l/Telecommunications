@@ -1,13 +1,9 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.*;
-import ru.vsu.telecom.data.parser.ContractParser;
-import ru.vsu.telecom.data.util.FileUtils;
 import ru.vsu.telecom.data.util.Sorter;
 import ru.vsu.telecom.factory.ObjectFactory;
 
-import java.io.IOException;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.function.Predicate;
 

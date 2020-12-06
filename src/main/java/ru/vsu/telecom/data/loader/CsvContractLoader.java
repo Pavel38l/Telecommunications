@@ -15,8 +15,9 @@ public interface CsvContractLoader {
      * @param csvFilePath the path to the csv file
      * @param contractRepository repository for filling
      * @throws IOException if an I/O error occurs opening the file
+     * @throws LoadException if csv data is not valid
      */
-    void buildFromCsv(ContractRepository contractRepository, String csvFilePath) throws IOException;
+    void buildFromCsv(ContractRepository contractRepository, String csvFilePath) throws IOException, LoadException;
 
     /**
      * Writes repository contracts to the file

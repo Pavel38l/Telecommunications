@@ -61,7 +61,12 @@ public class SimpleCsvContractLoaderTest {
         try {
             csvContractLoader.writeToCsv(contractRepository, "files/testData.csv");
             contractRepository.clear();
-            csvContractLoader.buildFromCsv(contractRepository, "files/testData.csv");
+            try {
+                csvContractLoader.buildFromCsv(contractRepository, "files/testData.csv");
+            } catch (LoadException ex) {
+                System.out.println(ex.getMessage());
+            }
+
             Assert.assertEquals(contracts, contractRepository.getAll());
         } catch (IOException e) {
             System.out.println("File not found!");

@@ -2,6 +2,8 @@ package ru.vsu.telecom;
 
 import ru.vsu.telecom.data.entity.Contract;
 import ru.vsu.telecom.data.entity.DigitalTelevisionContract;
+import ru.vsu.telecom.data.entity.MobileConnectContract;
+import ru.vsu.telecom.data.loader.validators.ValidateState;
 import ru.vsu.telecom.data.repository.ArrayContractRepository;
 import ru.vsu.telecom.data.repository.ContractRepository;
 import ru.vsu.telecom.data.repository.SortFilterContractRepository;

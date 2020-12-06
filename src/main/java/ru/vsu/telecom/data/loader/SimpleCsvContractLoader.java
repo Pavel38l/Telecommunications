@@ -4,7 +4,7 @@ import ru.vsu.telecom.data.entity.ChannelPackage;
 import ru.vsu.telecom.data.entity.Contract;
 import ru.vsu.telecom.data.entity.Customer;
 import ru.vsu.telecom.data.entity.DigitalTelevisionContract;
-import ru.vsu.telecom.data.parser.ContractParser;
+import ru.vsu.telecom.data.loader.validators.*;
 import ru.vsu.telecom.data.repository.ContractRepository;
 import ru.vsu.telecom.data.util.FileUtils;
 
@@ -18,18 +18,39 @@ import java.util.List;
  */
 public class SimpleCsvContractLoader implements CsvContractLoader {
 
+    private static List<Validator> validators = new ArrayList<>();
+    static {
+        validators.add(new IdValidator());
+        validators.add(new StartDateValidator());
+        validators.add(new EndDateValidator());
+        validators.add(new ContractPeriodValidator());
+        validators.add(new ContractNumberValidator());
+        validators.add(new CustomerAgeValidator());
+        validators.add(new TelevisionChannelIdValidator());
+        validators.add(new MobileSmsValidator());
+        validators.add(new InternetValidator());
+    }
+
     private final ContractParser parser = ContractParser.builder()
             .dataFormatter(DateTimeFormatter.ofPattern("dd.MM.yyyy"))
             .separator(",")
             .build();
+
     @Override
     public void buildFromCsv(ContractRepository contractRepository,
-                             String csvFilePath) throws IOException, RuntimeException {
+                             String csvFilePath) throws IOException, LoadException {
         List<String[]> stringData =  FileUtils.readCsv(csvFilePath);
         List<Customer> customers = new ArrayList<>();
         List<ChannelPackage> channelPackages = new ArrayList<>();
         for (String[] line : stringData) {
             Contract contract = parser.contractFromCsvLine(line);
+            // Contract validate
+            List<ValidateMessage> messages = validateContract(contract);
+            messages.forEach(m -> System.out.println(m.getMessage()));
+            if (!messages.isEmpty() && messages.get(messages.size() - 1).getState() == ValidateState.ERROR) {
+                throw new LoadException(messages.get(messages.size() - 1).getMessage());
+            }
+
             int exIndex = customers.indexOf(contract.getCustomer());
             if (exIndex != -1) {
                 contract.setCustomer(customers.get(exIndex));
@@ -55,5 +76,24 @@ public class SimpleCsvContractLoader implements CsvContractLoader {
         );
         contractRepository.getAll().forEach(contract -> data.add(parser.contractToCsvLine(contract)));
         FileUtils.write2Csv(csvFilePath, data);
+    }
+
+    /**
+     * Validate contract with all validators
+     * @param contract Contract to validate
+     * @return list of result validate message
+     */
+    private List<ValidateMessage> validateContract(Contract contract) {
+        List<ValidateMessage> messages = new ArrayList<>();
+        for (Validator validator : validators) {
+            if (validator.isAppliableFor(contract)) {
+                ValidateMessage message = validator.validate(contract);
+                messages.add(message);
+                if (message.getState() == ValidateState.ERROR) {
+                    break;
+                }
+            }
+        }
+        return messages;
     }
 }

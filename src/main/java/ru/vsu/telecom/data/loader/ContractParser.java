@@ -1,9 +1,11 @@
-package ru.vsu.telecom.data.parser;
+package ru.vsu.telecom.data.loader;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import ru.vsu.telecom.data.entity.*;
+import ru.vsu.telecom.data.loader.validators.ValidateMessage;
+import ru.vsu.telecom.data.loader.validators.Validator;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -26,10 +28,10 @@ public class ContractParser {
      * Returns a contract created from a csv line
      * @param line array of string - line in csv file
      * @return a contract created from a csv line
-     * @throws RuntimeException if the data is incorrect and an error occurs when parsing
+     * @throws LoadException if the data is incorrect and an error occurs when parsing
      */
 
-    public Contract contractFromCsvLine(String[] line) throws RuntimeException {
+    public Contract contractFromCsvLine(String[] line) throws LoadException {
         Contract contract;
         for (int i = 0;i < line.length;i++) {
             line[i] = line[i].trim();
@@ -86,7 +88,7 @@ public class ContractParser {
                         .build();
                 break;
             default:
-                throw new NumberFormatException("There is no such type");
+                throw new LoadException("There is no such type of contract!");
         }
         return contract;
     }
