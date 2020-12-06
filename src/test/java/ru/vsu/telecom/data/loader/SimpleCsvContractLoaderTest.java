@@ -58,6 +58,7 @@ public class SimpleCsvContractLoaderTest {
 
     @Test
     public void buildFromCsvAndWriteToCsv() {
+        System.out.println("Valid load example: ");
         try {
             csvContractLoader.writeToCsv(contractRepository, "files/testData.csv");
             contractRepository.clear();
@@ -73,9 +74,24 @@ public class SimpleCsvContractLoaderTest {
         }
     }
 
+    @Test(expected = LoadException.class)
+    public void buildFromCsvErrorTest() {
+        System.out.println("Load error example: ");
+        if (contractRepository.get(0L).isPresent()) {
+            contractRepository.get(0L).get().setId(-1L);
+        }
+        try {
+            csvContractLoader.writeToCsv(contractRepository, "files/testData.csv");
+            contractRepository.clear();
+            csvContractLoader.buildFromCsv(contractRepository, "files/testData.csv");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     private LocalDate createRandomLocalDate() {
-        long minDay = LocalDate.of(1970, 1, 1).toEpochDay();
-        long maxDay = LocalDate.of(2015, 12, 31).toEpochDay();
+        long minDay = LocalDate.of(1941, 1, 1).toEpochDay();
+        long maxDay = LocalDate.of(2000, 12, 31).toEpochDay();
         long randomDay = ThreadLocalRandom.current().nextLong(minDay, maxDay);
         return LocalDate.ofEpochDay(randomDay);
     }
@@ -105,7 +121,8 @@ public class SimpleCsvContractLoaderTest {
     public Contract createRandomContract(int i) {
         Contract contract;
         Long contractNumber = 100000L + rnd.nextInt(100000);
-        LocalDate startDate = createRandomLocalDate(), endDate = createRandomLocalDate();
+        LocalDate startDate = createRandomLocalDate();
+        LocalDate endDate = startDate.plusYears(rnd.nextInt(100) + 1);
         Customer customer = createRandomCustomer();
         ChannelPackage channelPackage = createRandomChannelPackage();
         int numberOfMinutes = rnd.nextInt(300);

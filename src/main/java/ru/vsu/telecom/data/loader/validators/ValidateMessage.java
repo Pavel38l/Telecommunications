@@ -21,4 +21,9 @@ public class ValidateMessage {
         this.state = ValidateState.OK;
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return String.format("%s: %s", this.state.toString(), this.message);
+    }
 }

@@ -8,7 +8,7 @@ import java.time.LocalDate;
  * @author Pavel Burdyug
  */
 public class EndDateValidator implements Validator{
-    LocalDate minDate = LocalDate.of(1941, 1, 1);
+    LocalDate minDate = LocalDate.of(1920, 1, 1);
 
     @Override
     public ValidateMessage validate(Contract contract) {

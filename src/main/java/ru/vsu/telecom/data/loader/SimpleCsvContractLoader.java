@@ -46,7 +46,9 @@ public class SimpleCsvContractLoader implements CsvContractLoader {
             Contract contract = parser.contractFromCsvLine(line);
             // Contract validate
             List<ValidateMessage> messages = validateContract(contract);
-            messages.forEach(m -> System.out.println(m.getMessage()));
+            System.out.printf("Contract id=%d%n", contract.getId());
+            messages.forEach(System.out::println);
+            System.out.println();
             if (!messages.isEmpty() && messages.get(messages.size() - 1).getState() == ValidateState.ERROR) {
                 throw new LoadException(messages.get(messages.size() - 1).getMessage());
             }

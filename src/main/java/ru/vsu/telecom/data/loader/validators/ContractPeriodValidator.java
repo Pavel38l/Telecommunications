@@ -13,7 +13,7 @@ public class ContractPeriodValidator implements Validator {
     @Override
     public ValidateMessage validate(Contract contract) {
         ValidateMessage message = new ValidateMessage("Contract period is correct.");
-        if (contract.getStartDate().compareTo(contract.getEndDate()) <= 0) {
+        if (contract.getStartDate().compareTo(contract.getEndDate()) >= 0) {
             message.setState(ValidateState.ERROR);
             message.setMessage("Start date is later then end date!");
         }

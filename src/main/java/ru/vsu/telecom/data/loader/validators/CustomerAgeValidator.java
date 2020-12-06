@@ -17,7 +17,7 @@ public class CustomerAgeValidator implements Validator {
             message.setMessage(String.format("Customer age is less then %d!", minAge));
         }
 
-        if (contract.getCustomer().calcAge() > minAge) {
+        if (contract.getCustomer().calcAge() > maxAge) {
             message.setState(ValidateState.WARNING);
             message.setMessage(String.format("Customer age over %d!", maxAge));
         }
