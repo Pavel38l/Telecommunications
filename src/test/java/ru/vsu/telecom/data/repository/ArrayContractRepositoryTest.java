@@ -8,6 +8,7 @@ import org.junit.Test;
 import ru.vsu.telecom.data.entity.*;
 import ru.vsu.telecom.data.util.MyComparator;
 import ru.vsu.telecom.data.util.MyPredicate;
+import ru.vsu.telecom.factory.ObjectFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -43,7 +44,7 @@ public class ArrayContractRepositoryTest {
 
     @Before
     public void setUp() {
-        contractRepository = new ArrayContractRepository();
+        contractRepository = ObjectFactory.getInstance().createObject(ArrayContractRepository.class);
         for (int i = 0; i < CONTRACT_COUNT; i++) {
             Contract contract = createRandomContract(i);
             contractRepository.add(contract);

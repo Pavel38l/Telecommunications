@@ -9,6 +9,7 @@ import ru.vsu.telecom.data.entity.*;
 import ru.vsu.telecom.data.repository.ArrayContractRepository;
 import ru.vsu.telecom.data.repository.ArrayContractRepositoryTest;
 import ru.vsu.telecom.data.repository.SortFilterContractRepository;
+import ru.vsu.telecom.factory.ObjectFactory;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,7 +28,7 @@ import static org.junit.Assert.*;
  */
 public class SimpleCsvContractLoaderTest {
     private SortFilterContractRepository contractRepository;
-    private SimpleCsvContractLoader csvContractLoader;
+    private CsvContractLoader csvContractLoader = ObjectFactory.getInstance().createObject(CsvContractLoader.class);
     private static final int CONTRACT_COUNT = 150;
     private Random rnd = new Random();
     private List<Contract> contracts = new ArrayList<>();
@@ -47,7 +48,6 @@ public class SimpleCsvContractLoaderTest {
 
     @Before
     public void setUp() {
-        csvContractLoader = new SimpleCsvContractLoader();
         contractRepository = new ArrayContractRepository();
         for (int i = 0; i < CONTRACT_COUNT; i++) {
             Contract contract = createRandomContract(i);

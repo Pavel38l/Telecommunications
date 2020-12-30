@@ -1,7 +1,9 @@
 package ru.vsu.telecom.data.repository;
 
 import ru.vsu.telecom.data.entity.*;
+import ru.vsu.telecom.data.util.QuickSorter;
 import ru.vsu.telecom.data.util.Sorter;
+import ru.vsu.telecom.factory.InjectByType;
 import ru.vsu.telecom.factory.ObjectFactory;
 
 import java.util.*;
@@ -18,7 +20,8 @@ public class ArrayContractRepository implements SortFilterContractRepository {
      * Number of contracts
      */
     private int count = 0;
-    private final Sorter<Contract> sorter = ObjectFactory.getInstance().createObject(Sorter.class);
+    @InjectByType
+    private Sorter<Contract> sorter;
 
     @Override
     public List<Contract> getAll() {
@@ -90,7 +93,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
 
     @Override
     public SortFilterContractRepository filter(Predicate<Contract> contractPredicate) {
-        SortFilterContractRepository repository = new ArrayContractRepository();
+        SortFilterContractRepository repository = ObjectFactory.getInstance().createObject(ArrayContractRepository.class);
         for (int i = 0;i < count;i++) {
             if (contractPredicate.test(contractsArray[i])) {
                 repository.add(contractsArray[i]);
@@ -101,7 +104,7 @@ public class ArrayContractRepository implements SortFilterContractRepository {
 
     @Override
     public SortFilterContractRepository sort(Comparator<Contract> contractComparator) {
-        SortFilterContractRepository repository = new ArrayContractRepository();
+        SortFilterContractRepository repository = ObjectFactory.getInstance().createObject(ArrayContractRepository.class);
         repository.addAll(
                 Arrays.asList(
                         sorter.sort(contractComparator, getAll().toArray(new Contract[0]))

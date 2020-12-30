@@ -1,6 +1,14 @@
 package ru.vsu.telecom.factory;
 
 import lombok.SneakyThrows;
+import ru.vsu.telecom.data.util.QuickSorter;
+import ru.vsu.telecom.data.util.Sorter;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Simple factory for creating objects
@@ -8,14 +16,23 @@ import lombok.SneakyThrows;
  */
 public class ObjectFactory {
     private static ObjectFactory ourInstance = new ObjectFactory();
-    private Config config;
+    private ScannerConfig config;
+    private List<ObjectInjector> injectors = new ArrayList<>();
 
     public static ObjectFactory getInstance() {
         return ourInstance;
     }
 
     private ObjectFactory() {
-        config = new Config();
+        config = new ScannerConfig("ru.vsu.telecom", new HashMap<>(Map.of(Sorter.class, QuickSorter.class)));
+        for (Class<? extends ObjectInjector> injector : config.getScanner().getSubTypesOf(ObjectInjector.class)) {
+            try {
+                injectors.add(injector.getDeclaredConstructor().newInstance());
+            } catch (ReflectiveOperationException ex) {
+                System.out.println(ex.getMessage());
+            }
+
+        }
     }
 
 
@@ -32,6 +49,9 @@ public class ObjectFactory {
             implClass = config.getImplClass(type);
         }
         T t = implClass.getDeclaredConstructor().newInstance();
+        for (ObjectInjector objectInjector : injectors) {
+            objectInjector.inject(t);
+        }
         return t;
     }
 }
