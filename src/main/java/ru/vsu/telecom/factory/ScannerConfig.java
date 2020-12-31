@@ -39,7 +39,7 @@ public class ScannerConfig implements Config {
         return ifc2ImplClass.computeIfAbsent(ifc, impl -> {
             Set<Class<? extends T>> impls = scanner.getSubTypesOf(ifc);
             if (impls.size() != 1) {
-                throw new RuntimeException(ifc + " Don't have implementations or have more than 1!");
+                throw new RuntimeException(ifc + " don't have implementations or have more than 1!");
             }
 
             return impls.iterator().next();

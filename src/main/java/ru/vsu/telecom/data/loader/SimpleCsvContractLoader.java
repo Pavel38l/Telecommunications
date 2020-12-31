@@ -7,6 +7,7 @@ import ru.vsu.telecom.data.entity.DigitalTelevisionContract;
 import ru.vsu.telecom.data.loader.validators.*;
 import ru.vsu.telecom.data.repository.ContractRepository;
 import ru.vsu.telecom.data.util.FileUtils;
+import ru.vsu.telecom.factory.InjectByType;
 
 import java.io.IOException;
 import java.time.format.DateTimeFormatter;
@@ -18,8 +19,9 @@ import java.util.List;
  */
 public class SimpleCsvContractLoader implements CsvContractLoader {
 
+    @InjectByType
     private static List<Validator> validators = new ArrayList<>();
-    static {
+  /*  static {
         validators.add(new IdValidator());
         validators.add(new StartDateValidator());
         validators.add(new EndDateValidator());
@@ -29,7 +31,7 @@ public class SimpleCsvContractLoader implements CsvContractLoader {
         validators.add(new TelevisionChannelIdValidator());
         validators.add(new MobileSmsValidator());
         validators.add(new InternetValidator());
-    }
+    }*/
 
     private final ContractParser parser = ContractParser.builder()
             .dataFormatter(DateTimeFormatter.ofPattern("dd.MM.yyyy"))

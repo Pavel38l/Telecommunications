@@ -5,13 +5,12 @@ import ru.vsu.telecom.data.util.QuickSorter;
 import ru.vsu.telecom.data.util.Sorter;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.TypeVariable;
+import java.util.*;
 
 /**
- * Simple factory for creating objects
+ * Factory for creating objects
  * @author Pavel_Burdyug
  */
 public class ObjectFactory {
@@ -24,7 +23,9 @@ public class ObjectFactory {
     }
 
     private ObjectFactory() {
-        config = new ScannerConfig("ru.vsu.telecom", new HashMap<>(Map.of(Sorter.class, QuickSorter.class)));
+        config = new ScannerConfig("ru.vsu.telecom", new HashMap<>(
+                Map.of(Sorter.class, QuickSorter.class, List.class, ArrayList.class))
+        );
         for (Class<? extends ObjectInjector> injector : config.getScanner().getSubTypesOf(ObjectInjector.class)) {
             try {
                 injectors.add(injector.getDeclaredConstructor().newInstance());
