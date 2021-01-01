@@ -3,6 +3,7 @@ package ru.vsu.telecom.data.repository;
 import ru.vsu.telecom.data.entity.*;
 import ru.vsu.telecom.data.util.QuickSorter;
 import ru.vsu.telecom.data.util.Sorter;
+import ru.vsu.telecom.factory.Configuration;
 import ru.vsu.telecom.factory.InjectByType;
 import ru.vsu.telecom.factory.ObjectFactory;
 
@@ -13,6 +14,7 @@ import java.util.function.Predicate;
  * Implementation using an array
  * @author Pavel_Burdyug
  */
+@Configuration(packagePaths = {"ru.vsu.telecom.data.util"})
 public class ArrayContractRepository implements SortFilterContractRepository {
     private static final int INITIAL_SIZE = 50;
     private Contract[] contractsArray = new Contract[INITIAL_SIZE];

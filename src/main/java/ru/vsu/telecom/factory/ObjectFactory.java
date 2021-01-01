@@ -23,9 +23,10 @@ public class ObjectFactory {
     }
 
     private ObjectFactory() {
-        config = new ScannerConfig("ru.vsu.telecom", new HashMap<>(
-                Map.of(Sorter.class, QuickSorter.class, List.class, ArrayList.class))
-        );
+        config = new ScannerConfig(new String[]{"ru.vsu.telecom"},
+                new HashMap<>(
+                    Map.of(Sorter.class, QuickSorter.class, List.class, ArrayList.class))
+                );
         for (Class<? extends ObjectInjector> injector : config.getScanner().getSubTypesOf(ObjectInjector.class)) {
             try {
                 injectors.add(injector.getDeclaredConstructor().newInstance());
@@ -48,6 +49,25 @@ public class ObjectFactory {
         Class<? extends T> implClass = type;
         if (implClass.isInterface()) {
             implClass = config.getImplClass(type);
+        }
+        T t = implClass.getDeclaredConstructor().newInstance();
+        for (ObjectInjector objectInjector : injectors) {
+            objectInjector.inject(t);
+        }
+        return t;
+    }
+
+    /**
+     * Return an object of a class or its implementation
+     * @param type type of created object
+     * @param <T> subtype of created object
+     * @return An object of a class or its implementation
+     */
+    @SneakyThrows
+    public <T> T createObject(Class<T> type, String[] packagePaths) {
+        Class<? extends T> implClass = type;
+        if (implClass.isInterface()) {
+            implClass = config.getImplClass(type, packagePaths);
         }
         T t = implClass.getDeclaredConstructor().newInstance();
         for (ObjectInjector objectInjector : injectors) {

@@ -7,6 +7,7 @@ import ru.vsu.telecom.data.entity.DigitalTelevisionContract;
 import ru.vsu.telecom.data.loader.validators.*;
 import ru.vsu.telecom.data.repository.ContractRepository;
 import ru.vsu.telecom.data.util.FileUtils;
+import ru.vsu.telecom.factory.Configuration;
 import ru.vsu.telecom.factory.InjectByType;
 
 import java.io.IOException;
@@ -17,6 +18,7 @@ import java.util.List;
 /**
  * @author Pavel Burdyug
  */
+@Configuration(packagePaths = "ru.vsu.telecom.data.loader")
 public class SimpleCsvContractLoader implements CsvContractLoader {
 
     @InjectByType
