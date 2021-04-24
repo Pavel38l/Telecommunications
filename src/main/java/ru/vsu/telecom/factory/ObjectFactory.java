@@ -1,6 +1,8 @@
 package ru.vsu.telecom.factory;
 
 import lombok.SneakyThrows;
+import ru.vsu.telecom.data.dbloader.ConnectionBuilder;
+import ru.vsu.telecom.data.dbloader.SimpleConnectionBuilder;
 import ru.vsu.telecom.data.util.QuickSorter;
 import ru.vsu.telecom.data.util.Sorter;
 
@@ -25,8 +27,11 @@ public class ObjectFactory {
     private ObjectFactory() {
         config = new ScannerConfig(new String[]{"ru.vsu.telecom"},
                 new HashMap<>(
-                    Map.of(Sorter.class, QuickSorter.class, List.class, ArrayList.class))
-                );
+                        Map.of(
+                                Sorter.class, QuickSorter.class,
+                                List.class, ArrayList.class
+                        ))
+        );
         for (Class<? extends ObjectInjector> injector : config.getScanner().getSubTypesOf(ObjectInjector.class)) {
             try {
                 injectors.add(injector.getDeclaredConstructor().newInstance());
