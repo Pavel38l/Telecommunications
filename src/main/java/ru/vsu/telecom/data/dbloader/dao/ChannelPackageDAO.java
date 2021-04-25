@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
+ * DAO to manage ChannelPackage
  * @author Burdyug Pavel
  */
 public class ChannelPackageDAO implements DAO<ChannelPackage> {

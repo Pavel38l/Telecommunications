@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 /**
+ * Simple connection pool
  * @author Burdyug Pavel
  */
 public class SimpleConnectionBuilder implements ConnectionBuilder {

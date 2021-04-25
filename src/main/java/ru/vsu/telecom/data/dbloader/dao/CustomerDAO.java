@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
+ * DAO to manage Customer
  * @author Burdyug Pavel
  */
 public class CustomerDAO implements DAO<Customer> {

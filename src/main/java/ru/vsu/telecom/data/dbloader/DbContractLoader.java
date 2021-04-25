@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
+ * Save contracts to database and load from db
  * @author Burdyug Pavel
  */
 public class DbContractLoader implements ContractLoader {
@@ -29,6 +30,9 @@ public class DbContractLoader implements ContractLoader {
         contractRepository.addAll(contractDAO.getAll());
     }
 
+    /**
+     * for clear db before save contracts
+     */
     private void clearDb() {
         try (
                 Connection connection = connectionBuilder.getConnection();

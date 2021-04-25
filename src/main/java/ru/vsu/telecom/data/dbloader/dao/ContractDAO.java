@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
+ * DAO to manage Contract
  * @author Burdyug Pavel
  */
 public class ContractDAO implements DAO<Contract> {
@@ -70,6 +71,12 @@ public class ContractDAO implements DAO<Contract> {
         }
     }
 
+    /**
+     * Return contract from ResultSet
+     * @param resultSet resultSet of contract query
+     * @return contract from ResultSet
+     * @throws SQLException when parameters are not read correctly
+     */
     private Contract createContractFromResult(ResultSet resultSet) throws SQLException {
         Contract contract;
         String contractType = resultSet.getString("contract_type");
@@ -98,6 +105,7 @@ public class ContractDAO implements DAO<Contract> {
         contract.setStartDate(resultSet.getDate("start_date").toLocalDate());
         contract.setEndDate(resultSet.getDate("end_date").toLocalDate());
         contract.setContractNumber(resultSet.getLong("contract_number"));
+        // customer insert
         Customer customer = customerDAO.get(
                 (int)resultSet.getLong("customer_id")
         ).orElseThrow(SQLException::new);
@@ -105,6 +113,12 @@ public class ContractDAO implements DAO<Contract> {
         return contract;
     }
 
+    /**
+     * Config statement for contract to insert
+     * @param contract contract to insert
+     * @param preparedStatement insert statement
+     * @throws SQLException when query params are wrong
+     */
     private void configStatementForContract(Contract contract, PreparedStatement preparedStatement) throws SQLException {
         int count = 1;
         preparedStatement.setLong(count++, contract.getId());
@@ -137,6 +151,7 @@ public class ContractDAO implements DAO<Contract> {
             preparedStatement.setNull(count++, Types.INTEGER);
             preparedStatement.setNull(count++, Types.DOUBLE);
             preparedStatement.setNull(count++, Types.DOUBLE);
+            // channel package insert
             if (channelPackageDAO.get(specContract.getChannelPackage().getId().intValue()).isEmpty()) {
                 channelPackageDAO.save(specContract.getChannelPackage());
             }
