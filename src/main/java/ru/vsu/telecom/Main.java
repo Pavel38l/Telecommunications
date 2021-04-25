@@ -1,6 +1,7 @@
 package ru.vsu.telecom;
 
 import ru.vsu.telecom.data.dbloader.dao.ChannelPackageDAO;
+import ru.vsu.telecom.data.dbloader.dao.ContractDAO;
 import ru.vsu.telecom.data.dbloader.dao.CustomerDAO;
 import ru.vsu.telecom.data.entity.*;
 import ru.vsu.telecom.data.loader.validators.ValidateState;
@@ -22,10 +23,6 @@ import java.util.function.Predicate;
  */
 public class Main {
     public static void main(String[] args) {
-        ChannelPackage channelPackage = new ChannelPackage(1L, "name", "descr");
-        ChannelPackageDAO dao = ObjectFactory.getInstance().createObject(ChannelPackageDAO.class);
-        dao.create(channelPackage);
-        var res = dao.get(1);
-        System.out.println(res);
+
     }
 }

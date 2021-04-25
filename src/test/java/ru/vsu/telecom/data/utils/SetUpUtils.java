@@ -58,19 +58,20 @@ public class SetUpUtils {
     }
 
     private static ChannelPackage createRandomChannelPackage() {
+        Long id = (long)rnd.nextInt(10);
         return ChannelPackage.builder()
-                .id((long)rnd.nextInt(10))
-                .name(RandomStringUtils.random(10, true, false))
-                .description(RandomStringUtils.random(20, true, false))
+                .id(id)
+                .name(String.format("name-%d", id)/*RandomStringUtils.random(10, true, false)*/)
+                .description(String.format("description-%d", id)/*RandomStringUtils.random(20, true, false)*/)
                 .build();
     }
 
     private static Customer createRandomCustomer() {
         long id = rnd.nextInt(100);
-        String fullName = fullNames.get(rnd.nextInt(fullNames.size()));
-        LocalDate dateOfBirth = createRandomLocalDate();
-        Sex sex = Sex.values()[rnd.nextInt(Sex.values().length)];
-        int passportSeriesNumber = 100000 + rnd.nextInt(100000);
+        String fullName = fullNames.get(Math.abs(fullNames.size() - (int)id) - 1);
+        LocalDate dateOfBirth = LocalDate.of(2000, 1, 1);///createRandomLocalDate();
+        Sex sex = Sex.values()[(int)id % 2];
+        int passportSeriesNumber = 100000 + (int)id;
         return new Customer(
                 id,
                 fullName,

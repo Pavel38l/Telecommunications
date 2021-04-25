@@ -33,6 +33,7 @@ CREATE TABLE "contract"
     "contract_type"          varchar(100),
     "number_of_minutes"      int,
     "number_of_sms"          int,
+    "traffic_size"            double precision,
     "connection_speed"       double precision,
     "channel_package_id"     bigint
 );

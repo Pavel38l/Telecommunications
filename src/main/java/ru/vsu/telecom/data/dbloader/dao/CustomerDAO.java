@@ -5,10 +5,7 @@ import ru.vsu.telecom.data.entity.Customer;
 import ru.vsu.telecom.data.entity.Sex;
 import ru.vsu.telecom.factory.InjectByType;
 
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.List;
 import java.util.Optional;
 
@@ -23,7 +20,10 @@ public class CustomerDAO implements DAO<Customer> {
 
     @Override
     public Optional<Customer> get(int id) {
-        try (PreparedStatement preparedStatement = connectionBuilder.getConnection().prepareStatement(SELECT_ID)) {
+        try (
+                Connection connection = connectionBuilder.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ID)
+        ) {
             preparedStatement.setInt(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
@@ -48,8 +48,10 @@ public class CustomerDAO implements DAO<Customer> {
     }
 
     @Override
-    public void create(Customer model) {
-        try (PreparedStatement preparedStatement = connectionBuilder.getConnection().prepareStatement(INSERT)
+    public void save(Customer model) {
+        try (
+                Connection connection = connectionBuilder.getConnection();
+                PreparedStatement preparedStatement = connection.prepareStatement(INSERT)
         ){
             int count = 1;
             preparedStatement.setLong(count++, model.getId());
@@ -57,9 +59,14 @@ public class CustomerDAO implements DAO<Customer> {
             preparedStatement.setDate(count++, Date.valueOf(model.getDateOfBirth()));
             preparedStatement.setString(count++, model.getSex().toString());
             preparedStatement.setInt(count++, model.getPassportSeriesNumber());
-            preparedStatement.executeQuery();
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
+    }
+
+    @Override
+    public void saveAll(List<Customer> models) {
+
     }
 }

@@ -1,27 +1,42 @@
 package ru.vsu.telecom.data.dbloader;
-
-import lombok.SneakyThrows;
-import ru.vsu.telecom.data.entity.Contract;
+import ru.vsu.telecom.data.dbloader.dao.ContractDAO;
 import ru.vsu.telecom.data.repository.ContractRepository;
+import ru.vsu.telecom.factory.InjectByType;
 
-import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  * @author Burdyug Pavel
  */
 public class DbContractLoader implements ContractLoader {
-    @SneakyThrows
+    @InjectByType
+    ContractDAO contractDAO;
+
+    @InjectByType
+    ConnectionBuilder connectionBuilder;
+
     @Override
     public void save(ContractRepository contractRepository) {
-        Contract contract = contractRepository.getAll().get(0);
-        for (Field field : Contract.class.getDeclaredFields()) {
-            field.setAccessible(true);
-            System.out.println(field.getType() + " " + field.getName() + " " + field.get(contract));
-        }
+        clearDb();
+        contractDAO.saveAll(contractRepository.getAll());
     }
 
     @Override
     public void load(ContractRepository contractRepository) {
+        contractRepository.clear();
+        contractRepository.addAll(contractDAO.getAll());
+    }
 
+    private void clearDb() {
+        try (
+                Connection connection = connectionBuilder.getConnection();
+                Statement statement = connection.createStatement()
+        ) {
+            statement.executeUpdate("truncate contract; truncate customer cascade; truncate channel_package cascade");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

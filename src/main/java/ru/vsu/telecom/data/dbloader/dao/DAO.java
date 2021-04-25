@@ -9,5 +9,6 @@ import java.util.Optional;
 public interface DAO<T> {
     Optional<T> get(int id);
     List<T> getAll();
-    void create(T model);
+    void save(T model);
+    void saveAll(List<T> models);
 }

@@ -1,5 +1,6 @@
 package ru.vsu.telecom.data.dbloader;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import ru.vsu.telecom.data.entity.Contract;
@@ -25,16 +26,15 @@ public class DbContractLoaderTest {
     @Before
     public void setUp() {
         contractRepository = ObjectFactory.getInstance().createObject(ArrayContractRepository.class);
-        SetUpUtils.generateRandomArrayContractRepository(150, contractRepository, contracts);
+        SetUpUtils.generateRandomArrayContractRepository(100, contractRepository, contracts);
         contractLoader = ObjectFactory.getInstance().createObject(DbContractLoader.class);
     }
 
     @Test
     public void save() {
         contractLoader.save(contractRepository);
+        contractLoader.load(contractRepository);
+        Assert.assertEquals(contracts, contractRepository.getAll());
     }
 
-    @Test
-    public void load() {
-    }
 }
