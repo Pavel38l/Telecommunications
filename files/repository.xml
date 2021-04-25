@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<arrayContractRepository>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="0">
+        <startDate>1994-10-07</startDate>
+        <endDate>1992-06-06</endDate>
+        <contractNumber>181763</contractNumber>
+        <customer id="67">
+            <fullName>Bruno Poole</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100067</passportSeriesNumber>
+        </customer>
+        <channelPackage id="9">
+            <name>name-9</name>
+            <description>description-9</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="1">
+        <startDate>2015-05-27</startDate>
+        <endDate>1974-07-22</endDate>
+        <contractNumber>181513</contractNumber>
+        <customer id="3">
+            <fullName>Franky Burnett</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100003</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>92</numberOfMinutes>
+        <numberOfSms>116</numberOfSms>
+        <trafficSize>3.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="2">
+        <startDate>1974-12-10</startDate>
+        <endDate>1981-11-21</endDate>
+        <contractNumber>195785</contractNumber>
+        <customer id="45">
+            <fullName>Abbigail Underwood</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100045</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>255.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="3">
+        <startDate>1972-08-19</startDate>
+        <endDate>1974-12-06</endDate>
+        <contractNumber>117840</contractNumber>
+        <customer id="48">
+            <fullName>Patience Ibarra</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100048</passportSeriesNumber>
+        </customer>
+        <channelPackage id="7">
+            <name>name-7</name>
+            <description>description-7</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="4">
+        <startDate>1977-09-14</startDate>
+        <endDate>2008-07-27</endDate>
+        <contractNumber>132170</contractNumber>
+        <customer id="86">
+            <fullName>Davina Wu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100086</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>25</numberOfMinutes>
+        <numberOfSms>29</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="5">
+        <startDate>2009-11-19</startDate>
+        <endDate>2006-07-21</endDate>
+        <contractNumber>116290</contractNumber>
+        <customer id="19">
+            <fullName>Laila Redman</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100019</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>79.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="6">
+        <startDate>2005-01-24</startDate>
+        <endDate>1984-08-30</endDate>
+        <contractNumber>199667</contractNumber>
+        <customer id="26">
+            <fullName>Kimberley Schroeder</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100026</passportSeriesNumber>
+        </customer>
+        <channelPackage id="7">
+            <name>name-7</name>
+            <description>description-7</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="7">
+        <startDate>1987-05-13</startDate>
+        <endDate>2006-03-03</endDate>
+        <contractNumber>155119</contractNumber>
+        <customer id="40">
+            <fullName>Anisha Spooner</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100040</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>16</numberOfMinutes>
+        <numberOfSms>73</numberOfSms>
+        <trafficSize>9.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="8">
+        <startDate>2006-03-30</startDate>
+        <endDate>1995-10-13</endDate>
+        <contractNumber>149638</contractNumber>
+        <customer id="86">
+            <fullName>Davina Wu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100086</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>24.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="9">
+        <startDate>1988-02-04</startDate>
+        <endDate>1976-09-14</endDate>
+        <contractNumber>127776</contractNumber>
+        <customer id="81">
+            <fullName>Santino Frye</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100081</passportSeriesNumber>
+        </customer>
+        <channelPackage id="9">
+            <name>name-9</name>
+            <description>description-9</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="10">
+        <startDate>1989-06-07</startDate>
+        <endDate>2010-05-27</endDate>
+        <contractNumber>120957</contractNumber>
+        <customer id="66">
+            <fullName>Elize Maddox</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100066</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>235</numberOfMinutes>
+        <numberOfSms>157</numberOfSms>
+        <trafficSize>4.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="11">
+        <startDate>2012-06-18</startDate>
+        <endDate>1988-11-17</endDate>
+        <contractNumber>199335</contractNumber>
+        <customer id="76">
+            <fullName>Latisha Mayer</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100076</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>228.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="12">
+        <startDate>1998-07-21</startDate>
+        <endDate>2007-10-10</endDate>
+        <contractNumber>148962</contractNumber>
+        <customer id="87">
+            <fullName>Monet Cantu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100087</passportSeriesNumber>
+        </customer>
+        <channelPackage id="8">
+            <name>name-8</name>
+            <description>description-8</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="13">
+        <startDate>2006-01-16</startDate>
+        <endDate>1992-03-01</endDate>
+        <contractNumber>106127</contractNumber>
+        <customer id="95">
+            <fullName>Mckenzie Austin</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100095</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>291</numberOfMinutes>
+        <numberOfSms>76</numberOfSms>
+        <trafficSize>4.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="14">
+        <startDate>1983-12-02</startDate>
+        <endDate>1986-08-31</endDate>
+        <contractNumber>168119</contractNumber>
+        <customer id="11">
+            <fullName>Neave Leon</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100011</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>308.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="15">
+        <startDate>1972-06-11</startDate>
+        <endDate>2014-08-15</endDate>
+        <contractNumber>112880</contractNumber>
+        <customer id="62">
+            <fullName>Jana Brady</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100062</passportSeriesNumber>
+        </customer>
+        <channelPackage id="2">
+            <name>name-2</name>
+            <description>description-2</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="16">
+        <startDate>2006-08-25</startDate>
+        <endDate>1971-12-30</endDate>
+        <contractNumber>107274</contractNumber>
+        <customer id="86">
+            <fullName>Davina Wu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100086</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>96</numberOfMinutes>
+        <numberOfSms>0</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="17">
+        <startDate>1984-06-02</startDate>
+        <endDate>1972-11-01</endDate>
+        <contractNumber>133227</contractNumber>
+        <customer id="45">
+            <fullName>Abbigail Underwood</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100045</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>140.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="18">
+        <startDate>1979-07-29</startDate>
+        <endDate>1970-08-01</endDate>
+        <contractNumber>176663</contractNumber>
+        <customer id="3">
+            <fullName>Franky Burnett</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100003</passportSeriesNumber>
+        </customer>
+        <channelPackage id="5">
+            <name>name-5</name>
+            <description>description-5</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="19">
+        <startDate>1977-10-04</startDate>
+        <endDate>1984-01-14</endDate>
+        <contractNumber>181190</contractNumber>
+        <customer id="61">
+            <fullName>Dora Barclay</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100061</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>61</numberOfMinutes>
+        <numberOfSms>165</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="20">
+        <startDate>2010-04-12</startDate>
+        <endDate>1973-06-10</endDate>
+        <contractNumber>159967</contractNumber>
+        <customer id="32">
+            <fullName>Kiana Redmond</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100032</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>382.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="21">
+        <startDate>1993-09-05</startDate>
+        <endDate>1999-09-27</endDate>
+        <contractNumber>132589</contractNumber>
+        <customer id="72">
+            <fullName>Terri Tran</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100072</passportSeriesNumber>
+        </customer>
+        <channelPackage id="5">
+            <name>name-5</name>
+            <description>description-5</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="22">
+        <startDate>1971-12-11</startDate>
+        <endDate>1974-03-24</endDate>
+        <contractNumber>124089</contractNumber>
+        <customer id="40">
+            <fullName>Anisha Spooner</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100040</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>79</numberOfMinutes>
+        <numberOfSms>4</numberOfSms>
+        <trafficSize>3.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="23">
+        <startDate>1971-02-16</startDate>
+        <endDate>1976-03-08</endDate>
+        <contractNumber>147553</contractNumber>
+        <customer id="35">
+            <fullName>Yisroel Simons</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100035</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>172.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="24">
+        <startDate>1979-11-27</startDate>
+        <endDate>1983-05-23</endDate>
+        <contractNumber>112897</contractNumber>
+        <customer id="8">
+            <fullName>Fern White</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100008</passportSeriesNumber>
+        </customer>
+        <channelPackage id="1">
+            <name>name-1</name>
+            <description>description-1</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="25">
+        <startDate>1973-09-10</startDate>
+        <endDate>1992-04-08</endDate>
+        <contractNumber>131854</contractNumber>
+        <customer id="47">
+            <fullName>Boyd Goulding</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100047</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>124</numberOfMinutes>
+        <numberOfSms>142</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="26">
+        <startDate>1977-04-07</startDate>
+        <endDate>1993-10-18</endDate>
+        <contractNumber>184060</contractNumber>
+        <customer id="93">
+            <fullName>Nelly Burn</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100093</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>219.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="27">
+        <startDate>1988-06-08</startDate>
+        <endDate>2010-05-09</endDate>
+        <contractNumber>190852</contractNumber>
+        <customer id="46">
+            <fullName>Karla Terrell</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100046</passportSeriesNumber>
+        </customer>
+        <channelPackage id="2">
+            <name>name-2</name>
+            <description>description-2</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="28">
+        <startDate>1971-08-25</startDate>
+        <endDate>1992-05-01</endDate>
+        <contractNumber>145437</contractNumber>
+        <customer id="97">
+            <fullName>Jagdeep Hall</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100097</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>79</numberOfMinutes>
+        <numberOfSms>153</numberOfSms>
+        <trafficSize>8.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="29">
+        <startDate>1976-01-13</startDate>
+        <endDate>1974-02-08</endDate>
+        <contractNumber>134797</contractNumber>
+        <customer id="36">
+            <fullName>Ilyas Levine</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100036</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>78.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="30">
+        <startDate>2010-01-05</startDate>
+        <endDate>2005-08-19</endDate>
+        <contractNumber>116993</contractNumber>
+        <customer id="39">
+            <fullName>Nazia Singh</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100039</passportSeriesNumber>
+        </customer>
+        <channelPackage id="9">
+            <name>name-9</name>
+            <description>description-9</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="31">
+        <startDate>2000-01-16</startDate>
+        <endDate>2011-08-04</endDate>
+        <contractNumber>151772</contractNumber>
+        <customer id="52">
+            <fullName>Lisa-Marie Harrell</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100052</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>137</numberOfMinutes>
+        <numberOfSms>19</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="32">
+        <startDate>1985-12-13</startDate>
+        <endDate>1973-03-20</endDate>
+        <contractNumber>138172</contractNumber>
+        <customer id="29">
+            <fullName>Eadie Cobb</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100029</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>313.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="33">
+        <startDate>1998-11-06</startDate>
+        <endDate>1989-05-25</endDate>
+        <contractNumber>142679</contractNumber>
+        <customer id="80">
+            <fullName>Shreya Hardin</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100080</passportSeriesNumber>
+        </customer>
+        <channelPackage id="2">
+            <name>name-2</name>
+            <description>description-2</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="34">
+        <startDate>2005-11-16</startDate>
+        <endDate>2015-11-07</endDate>
+        <contractNumber>155111</contractNumber>
+        <customer id="3">
+            <fullName>Franky Burnett</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100003</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>105</numberOfMinutes>
+        <numberOfSms>90</numberOfSms>
+        <trafficSize>6.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="35">
+        <startDate>1996-06-09</startDate>
+        <endDate>2010-09-19</endDate>
+        <contractNumber>139728</contractNumber>
+        <customer id="13">
+            <fullName>Lyndsey Ross</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100013</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>217.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="36">
+        <startDate>1973-09-14</startDate>
+        <endDate>2009-08-05</endDate>
+        <contractNumber>100789</contractNumber>
+        <customer id="10">
+            <fullName>Orson Coffey</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100010</passportSeriesNumber>
+        </customer>
+        <channelPackage id="5">
+            <name>name-5</name>
+            <description>description-5</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="37">
+        <startDate>1980-11-16</startDate>
+        <endDate>1995-06-05</endDate>
+        <contractNumber>111723</contractNumber>
+        <customer id="19">
+            <fullName>Laila Redman</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100019</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>131</numberOfMinutes>
+        <numberOfSms>0</numberOfSms>
+        <trafficSize>3.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="38">
+        <startDate>1972-09-09</startDate>
+        <endDate>1984-08-18</endDate>
+        <contractNumber>164779</contractNumber>
+        <customer id="11">
+            <fullName>Neave Leon</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100011</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>358.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="39">
+        <startDate>2013-06-27</startDate>
+        <endDate>1993-02-17</endDate>
+        <contractNumber>173975</contractNumber>
+        <customer id="63">
+            <fullName>Caius Palacios</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100063</passportSeriesNumber>
+        </customer>
+        <channelPackage id="7">
+            <name>name-7</name>
+            <description>description-7</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="40">
+        <startDate>1985-12-04</startDate>
+        <endDate>1982-08-03</endDate>
+        <contractNumber>157074</contractNumber>
+        <customer id="72">
+            <fullName>Terri Tran</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100072</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>143</numberOfMinutes>
+        <numberOfSms>231</numberOfSms>
+        <trafficSize>9.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="41">
+        <startDate>1987-04-19</startDate>
+        <endDate>1976-07-19</endDate>
+        <contractNumber>136801</contractNumber>
+        <customer id="30">
+            <fullName>Alby Hanson</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100030</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>40.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="42">
+        <startDate>2010-07-27</startDate>
+        <endDate>1972-01-19</endDate>
+        <contractNumber>126468</contractNumber>
+        <customer id="77">
+            <fullName>Fiza Fuentes</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100077</passportSeriesNumber>
+        </customer>
+        <channelPackage id="1">
+            <name>name-1</name>
+            <description>description-1</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="43">
+        <startDate>2014-04-01</startDate>
+        <endDate>1979-05-25</endDate>
+        <contractNumber>103122</contractNumber>
+        <customer id="37">
+            <fullName>Kade Rowley</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100037</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>115</numberOfMinutes>
+        <numberOfSms>155</numberOfSms>
+        <trafficSize>2.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="44">
+        <startDate>1970-08-21</startDate>
+        <endDate>1972-01-22</endDate>
+        <contractNumber>151686</contractNumber>
+        <customer id="48">
+            <fullName>Patience Ibarra</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100048</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>374.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="45">
+        <startDate>2008-02-07</startDate>
+        <endDate>2009-12-22</endDate>
+        <contractNumber>184429</contractNumber>
+        <customer id="50">
+            <fullName>Desiree Sparks</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100050</passportSeriesNumber>
+        </customer>
+        <channelPackage id="0">
+            <name>name-0</name>
+            <description>description-0</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="46">
+        <startDate>2013-10-04</startDate>
+        <endDate>1982-03-26</endDate>
+        <contractNumber>121154</contractNumber>
+        <customer id="19">
+            <fullName>Laila Redman</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100019</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>50</numberOfMinutes>
+        <numberOfSms>202</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="47">
+        <startDate>1982-04-02</startDate>
+        <endDate>1997-06-14</endDate>
+        <contractNumber>147007</contractNumber>
+        <customer id="60">
+            <fullName>Khloe Bates</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100060</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>289.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="48">
+        <startDate>1971-05-09</startDate>
+        <endDate>1974-01-31</endDate>
+        <contractNumber>141976</contractNumber>
+        <customer id="60">
+            <fullName>Khloe Bates</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100060</passportSeriesNumber>
+        </customer>
+        <channelPackage id="1">
+            <name>name-1</name>
+            <description>description-1</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="49">
+        <startDate>1999-07-26</startDate>
+        <endDate>2000-08-06</endDate>
+        <contractNumber>193484</contractNumber>
+        <customer id="95">
+            <fullName>Mckenzie Austin</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100095</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>163</numberOfMinutes>
+        <numberOfSms>25</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="50">
+        <startDate>2002-01-18</startDate>
+        <endDate>2003-09-01</endDate>
+        <contractNumber>180334</contractNumber>
+        <customer id="78">
+            <fullName>Uwais Devlin</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100078</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>294.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="51">
+        <startDate>2003-04-30</startDate>
+        <endDate>2009-08-04</endDate>
+        <contractNumber>136878</contractNumber>
+        <customer id="63">
+            <fullName>Caius Palacios</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100063</passportSeriesNumber>
+        </customer>
+        <channelPackage id="2">
+            <name>name-2</name>
+            <description>description-2</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="52">
+        <startDate>2015-03-26</startDate>
+        <endDate>1986-11-01</endDate>
+        <contractNumber>124145</contractNumber>
+        <customer id="83">
+            <fullName>Pearce Diaz</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100083</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>236</numberOfMinutes>
+        <numberOfSms>102</numberOfSms>
+        <trafficSize>6.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="53">
+        <startDate>2005-05-28</startDate>
+        <endDate>2008-12-09</endDate>
+        <contractNumber>183554</contractNumber>
+        <customer id="47">
+            <fullName>Boyd Goulding</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100047</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>240.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="54">
+        <startDate>1988-09-14</startDate>
+        <endDate>2004-04-22</endDate>
+        <contractNumber>198373</contractNumber>
+        <customer id="90">
+            <fullName>Devon Fisher</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100090</passportSeriesNumber>
+        </customer>
+        <channelPackage id="8">
+            <name>name-8</name>
+            <description>description-8</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="55">
+        <startDate>1983-09-10</startDate>
+        <endDate>2007-04-10</endDate>
+        <contractNumber>102364</contractNumber>
+        <customer id="84">
+            <fullName>Cheryl Lancaster</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100084</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>117</numberOfMinutes>
+        <numberOfSms>117</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="56">
+        <startDate>1971-02-27</startDate>
+        <endDate>1992-07-08</endDate>
+        <contractNumber>106665</contractNumber>
+        <customer id="12">
+            <fullName>Kailan Fernandez</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100012</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>244.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="57">
+        <startDate>1980-12-03</startDate>
+        <endDate>2000-03-13</endDate>
+        <contractNumber>188390</contractNumber>
+        <customer id="73">
+            <fullName>Derren Cochran</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100073</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="58">
+        <startDate>2005-02-23</startDate>
+        <endDate>2011-02-13</endDate>
+        <contractNumber>116695</contractNumber>
+        <customer id="27">
+            <fullName>Rhona Macfarlane</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100027</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>246</numberOfMinutes>
+        <numberOfSms>160</numberOfSms>
+        <trafficSize>6.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="59">
+        <startDate>2015-05-15</startDate>
+        <endDate>1976-01-29</endDate>
+        <contractNumber>133026</contractNumber>
+        <customer id="24">
+            <fullName>Nabiha Mair</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100024</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>373.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="60">
+        <startDate>2010-12-20</startDate>
+        <endDate>1986-02-26</endDate>
+        <contractNumber>119607</contractNumber>
+        <customer id="82">
+            <fullName>Daniel Booker</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100082</passportSeriesNumber>
+        </customer>
+        <channelPackage id="6">
+            <name>name-6</name>
+            <description>description-6</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="61">
+        <startDate>2003-11-04</startDate>
+        <endDate>1983-08-09</endDate>
+        <contractNumber>192868</contractNumber>
+        <customer id="82">
+            <fullName>Daniel Booker</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100082</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>292</numberOfMinutes>
+        <numberOfSms>189</numberOfSms>
+        <trafficSize>2.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="62">
+        <startDate>2003-03-17</startDate>
+        <endDate>2008-12-04</endDate>
+        <contractNumber>137765</contractNumber>
+        <customer id="94">
+            <fullName>Maegan Gardner</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100094</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>21.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="63">
+        <startDate>1998-11-11</startDate>
+        <endDate>1986-07-22</endDate>
+        <contractNumber>180688</contractNumber>
+        <customer id="7">
+            <fullName>Arandeep Hutchings</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100007</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="64">
+        <startDate>1987-03-18</startDate>
+        <endDate>1985-08-01</endDate>
+        <contractNumber>164894</contractNumber>
+        <customer id="87">
+            <fullName>Monet Cantu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100087</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>269</numberOfMinutes>
+        <numberOfSms>268</numberOfSms>
+        <trafficSize>4.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="65">
+        <startDate>2008-09-14</startDate>
+        <endDate>2003-06-01</endDate>
+        <contractNumber>179270</contractNumber>
+        <customer id="81">
+            <fullName>Santino Frye</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100081</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>298.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="66">
+        <startDate>1971-08-28</startDate>
+        <endDate>2003-03-16</endDate>
+        <contractNumber>106911</contractNumber>
+        <customer id="98">
+            <fullName>Dorian Mccullough</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100098</passportSeriesNumber>
+        </customer>
+        <channelPackage id="9">
+            <name>name-9</name>
+            <description>description-9</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="67">
+        <startDate>1999-02-11</startDate>
+        <endDate>2015-11-23</endDate>
+        <contractNumber>103555</contractNumber>
+        <customer id="39">
+            <fullName>Nazia Singh</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100039</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>122</numberOfMinutes>
+        <numberOfSms>121</numberOfSms>
+        <trafficSize>5.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="68">
+        <startDate>1970-07-20</startDate>
+        <endDate>2005-09-10</endDate>
+        <contractNumber>191036</contractNumber>
+        <customer id="35">
+            <fullName>Yisroel Simons</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100035</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>221.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="69">
+        <startDate>1984-02-22</startDate>
+        <endDate>2008-10-10</endDate>
+        <contractNumber>127543</contractNumber>
+        <customer id="44">
+            <fullName>Lynda Hale</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100044</passportSeriesNumber>
+        </customer>
+        <channelPackage id="4">
+            <name>name-4</name>
+            <description>description-4</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="70">
+        <startDate>2004-05-13</startDate>
+        <endDate>2010-11-20</endDate>
+        <contractNumber>135651</contractNumber>
+        <customer id="42">
+            <fullName>Byron Wheatley</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100042</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>129</numberOfMinutes>
+        <numberOfSms>265</numberOfSms>
+        <trafficSize>9.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="71">
+        <startDate>1989-07-12</startDate>
+        <endDate>2009-01-11</endDate>
+        <contractNumber>141624</contractNumber>
+        <customer id="36">
+            <fullName>Ilyas Levine</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100036</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>345.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="72">
+        <startDate>2013-12-03</startDate>
+        <endDate>1982-02-28</endDate>
+        <contractNumber>148885</contractNumber>
+        <customer id="93">
+            <fullName>Nelly Burn</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100093</passportSeriesNumber>
+        </customer>
+        <channelPackage id="0">
+            <name>name-0</name>
+            <description>description-0</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="73">
+        <startDate>2002-06-10</startDate>
+        <endDate>1981-08-08</endDate>
+        <contractNumber>164204</contractNumber>
+        <customer id="63">
+            <fullName>Caius Palacios</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100063</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>204</numberOfMinutes>
+        <numberOfSms>203</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="74">
+        <startDate>1985-01-24</startDate>
+        <endDate>2001-08-12</endDate>
+        <contractNumber>154010</contractNumber>
+        <customer id="9">
+            <fullName>Tobias Metcalfe</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100009</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>67.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="75">
+        <startDate>1970-07-01</startDate>
+        <endDate>1996-08-14</endDate>
+        <contractNumber>108357</contractNumber>
+        <customer id="87">
+            <fullName>Monet Cantu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100087</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="76">
+        <startDate>1978-07-04</startDate>
+        <endDate>1970-09-06</endDate>
+        <contractNumber>158405</contractNumber>
+        <customer id="73">
+            <fullName>Derren Cochran</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100073</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>154</numberOfMinutes>
+        <numberOfSms>205</numberOfSms>
+        <trafficSize>9.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="77">
+        <startDate>1992-12-12</startDate>
+        <endDate>2004-03-27</endDate>
+        <contractNumber>143784</contractNumber>
+        <customer id="42">
+            <fullName>Byron Wheatley</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100042</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>64.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="78">
+        <startDate>1985-06-28</startDate>
+        <endDate>2001-04-18</endDate>
+        <contractNumber>143125</contractNumber>
+        <customer id="69">
+            <fullName>Zi Begum</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100069</passportSeriesNumber>
+        </customer>
+        <channelPackage id="9">
+            <name>name-9</name>
+            <description>description-9</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="79">
+        <startDate>2009-07-05</startDate>
+        <endDate>1992-10-06</endDate>
+        <contractNumber>158730</contractNumber>
+        <customer id="84">
+            <fullName>Cheryl Lancaster</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100084</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>248</numberOfMinutes>
+        <numberOfSms>183</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="80">
+        <startDate>2000-10-14</startDate>
+        <endDate>1993-12-26</endDate>
+        <contractNumber>150285</contractNumber>
+        <customer id="20">
+            <fullName>Bertie Sexton</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100020</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>128.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="81">
+        <startDate>1970-11-25</startDate>
+        <endDate>2001-04-02</endDate>
+        <contractNumber>164483</contractNumber>
+        <customer id="35">
+            <fullName>Yisroel Simons</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100035</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="82">
+        <startDate>2010-02-07</startDate>
+        <endDate>2010-09-25</endDate>
+        <contractNumber>155821</contractNumber>
+        <customer id="57">
+            <fullName>Darcy Bain</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100057</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>241</numberOfMinutes>
+        <numberOfSms>243</numberOfSms>
+        <trafficSize>1.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="83">
+        <startDate>2003-12-12</startDate>
+        <endDate>1975-12-22</endDate>
+        <contractNumber>195920</contractNumber>
+        <customer id="45">
+            <fullName>Abbigail Underwood</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100045</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>44.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="84">
+        <startDate>2007-09-19</startDate>
+        <endDate>2008-10-06</endDate>
+        <contractNumber>195772</contractNumber>
+        <customer id="1">
+            <fullName>Darlene Spence</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100001</passportSeriesNumber>
+        </customer>
+        <channelPackage id="1">
+            <name>name-1</name>
+            <description>description-1</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="85">
+        <startDate>1992-07-21</startDate>
+        <endDate>1983-10-29</endDate>
+        <contractNumber>146351</contractNumber>
+        <customer id="9">
+            <fullName>Tobias Metcalfe</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100009</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>20</numberOfMinutes>
+        <numberOfSms>202</numberOfSms>
+        <trafficSize>2.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="86">
+        <startDate>1992-03-16</startDate>
+        <endDate>2012-12-27</endDate>
+        <contractNumber>192032</contractNumber>
+        <customer id="33">
+            <fullName>Cassidy Schwartz</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100033</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>189.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="87">
+        <startDate>1988-02-06</startDate>
+        <endDate>1991-06-29</endDate>
+        <contractNumber>172310</contractNumber>
+        <customer id="87">
+            <fullName>Monet Cantu</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100087</passportSeriesNumber>
+        </customer>
+        <channelPackage id="8">
+            <name>name-8</name>
+            <description>description-8</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="88">
+        <startDate>2013-07-14</startDate>
+        <endDate>2004-04-10</endDate>
+        <contractNumber>195334</contractNumber>
+        <customer id="12">
+            <fullName>Kailan Fernandez</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100012</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>128</numberOfMinutes>
+        <numberOfSms>73</numberOfSms>
+        <trafficSize>2.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="89">
+        <startDate>1987-03-28</startDate>
+        <endDate>2008-11-24</endDate>
+        <contractNumber>112223</contractNumber>
+        <customer id="0">
+            <fullName>Scarlet Esparza</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100000</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>305.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="90">
+        <startDate>2015-02-26</startDate>
+        <endDate>1976-08-08</endDate>
+        <contractNumber>132431</contractNumber>
+        <customer id="28">
+            <fullName>Kaylan Chandler</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100028</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="91">
+        <startDate>2004-06-07</startDate>
+        <endDate>2013-06-16</endDate>
+        <contractNumber>160236</contractNumber>
+        <customer id="68">
+            <fullName>Hebe Morales</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100068</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>163</numberOfMinutes>
+        <numberOfSms>56</numberOfSms>
+        <trafficSize>7.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="92">
+        <startDate>2007-03-05</startDate>
+        <endDate>1984-12-04</endDate>
+        <contractNumber>146698</contractNumber>
+        <customer id="2">
+            <fullName>Farah Conway</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100002</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>155.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="93">
+        <startDate>1971-08-22</startDate>
+        <endDate>1984-09-12</endDate>
+        <contractNumber>186062</contractNumber>
+        <customer id="89">
+            <fullName>Warwick Burns</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100089</passportSeriesNumber>
+        </customer>
+        <channelPackage id="7">
+            <name>name-7</name>
+            <description>description-7</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="94">
+        <startDate>1980-04-16</startDate>
+        <endDate>1992-05-04</endDate>
+        <contractNumber>174685</contractNumber>
+        <customer id="17">
+            <fullName>Layla Jordan</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100017</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>182</numberOfMinutes>
+        <numberOfSms>187</numberOfSms>
+        <trafficSize>0.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="95">
+        <startDate>2014-05-14</startDate>
+        <endDate>2010-05-30</endDate>
+        <contractNumber>170439</contractNumber>
+        <customer id="81">
+            <fullName>Santino Frye</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100081</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>341.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="96">
+        <startDate>2014-12-24</startDate>
+        <endDate>2004-11-13</endDate>
+        <contractNumber>177092</contractNumber>
+        <customer id="65">
+            <fullName>Lillie Hurley</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100065</passportSeriesNumber>
+        </customer>
+        <channelPackage id="3">
+            <name>name-3</name>
+            <description>description-3</description>
+        </channelPackage>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="mobileConnectContract" id="97">
+        <startDate>1982-10-29</startDate>
+        <endDate>2003-12-09</endDate>
+        <contractNumber>184800</contractNumber>
+        <customer id="24">
+            <fullName>Nabiha Mair</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100024</passportSeriesNumber>
+        </customer>
+        <numberOfMinutes>198</numberOfMinutes>
+        <numberOfSms>71</numberOfSms>
+        <trafficSize>6.0</trafficSize>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="wiredInternetContract" id="98">
+        <startDate>1983-08-04</startDate>
+        <endDate>2004-02-06</endDate>
+        <contractNumber>170603</contractNumber>
+        <customer id="3">
+            <fullName>Franky Burnett</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>FEMALE</sex>
+            <passportSeriesNumber>100003</passportSeriesNumber>
+        </customer>
+        <connectionSpeed>137.0</connectionSpeed>
+    </contracts>
+    <contracts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="digitalTelevisionContract" id="99">
+        <startDate>2006-02-07</startDate>
+        <endDate>2010-09-29</endDate>
+        <contractNumber>133751</contractNumber>
+        <customer id="76">
+            <fullName>Latisha Mayer</fullName>
+            <dateOfBirth>2000-01-01</dateOfBirth>
+            <sex>MALE</sex>
+            <passportSeriesNumber>100076</passportSeriesNumber>
+        </customer>
+        <channelPackage id="5">
+            <name>name-5</name>
+            <description>description-5</description>
+        </channelPackage>
+    </contracts>
+    <count>100</count>
+</arrayContractRepository>

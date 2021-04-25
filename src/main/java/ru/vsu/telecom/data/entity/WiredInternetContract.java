@@ -2,6 +2,7 @@ package ru.vsu.telecom.data.entity;
 
 import lombok.*;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.time.LocalDate;
 
 /**
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
+@XmlRootElement
 public class WiredInternetContract extends Contract {
     private double connectionSpeed;
 

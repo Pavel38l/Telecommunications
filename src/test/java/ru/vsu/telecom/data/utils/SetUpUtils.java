@@ -80,7 +80,7 @@ public class SetUpUtils {
                 passportSeriesNumber
         );
     }
-    private static Contract createRandomContract(int i) {
+    public static Contract createRandomContract(int i) {
         Contract contract;
         Long contractNumber = 100000L + rnd.nextInt(100000);
         LocalDate startDate = createRandomLocalDate(), endDate = createRandomLocalDate();

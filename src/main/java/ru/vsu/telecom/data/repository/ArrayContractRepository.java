@@ -7,6 +7,9 @@ import ru.vsu.telecom.factory.Configuration;
 import ru.vsu.telecom.factory.InjectByType;
 import ru.vsu.telecom.factory.ObjectFactory;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlElementWrapper;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.*;
 import java.util.function.Predicate;
 
@@ -14,13 +17,17 @@ import java.util.function.Predicate;
  * Implementation using an array
  * @author Pavel_Burdyug
  */
+
+@XmlRootElement
 @Configuration(packagePaths = {"ru.vsu.telecom.data.util"})
 public class ArrayContractRepository implements SortFilterContractRepository {
     private static final int INITIAL_SIZE = 50;
+    @XmlElement(name = "contracts")
     private Contract[] contractsArray = new Contract[INITIAL_SIZE];
     /**
      * Number of contracts
      */
+    @XmlElement
     private int count = 0;
     @InjectByType
     private Sorter<Contract> sorter;
